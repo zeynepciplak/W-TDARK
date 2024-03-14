@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerCtrl : MonoBehaviour
 {   
-    public static float movSpeed = 5;
+    public static float movSpeed = 25;
     public static float speedX, speedY;
     Rigidbody2D rb;
 

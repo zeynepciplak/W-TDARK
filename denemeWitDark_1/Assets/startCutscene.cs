@@ -1,11 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class startCutscene : MonoBehaviour
 {
     public static bool isCutsceneOn;
     public Animator canAnim;
+
+    
+    private TilemapRenderer yeniAltDuvarRenderer;
+    // Her biri için mi yapmam gerekiyor dedirtti
+    private TilemapCollider2D yeniAltDuvarCollider;
+    void Start()
+    {
+        // Get reference to the tilemap in Start()
+        
+        yeniAltDuvarRenderer = GameObject.Find("Yeni_AltDuvar").GetComponent<TilemapRenderer>();
+        yeniAltDuvarCollider = GameObject.Find("Yeni_AltDuvar").GetComponent<TilemapCollider2D>();
+
+    }
+
     void OnTriggerEnter2D(Collider2D collision)
     {
         
@@ -26,6 +41,11 @@ public class startCutscene : MonoBehaviour
         PlayerCtrl.movSpeed = 5;
         isCutsceneOn = false;
         canAnim.SetBool("cutscene1", false);
+
+        yeniAltDuvarRenderer.enabled = true;
+
+        yeniAltDuvarCollider.enabled = true;
+
         // Tilemap'i ismine göre bulun (benzersiz olduðunu varsayarak)
         GameObject tilemapObject = GameObject.Find("GonnaLostTrees");
         if (tilemapObject != null)
@@ -36,7 +56,8 @@ public class startCutscene : MonoBehaviour
         {
             Debug.LogError("Tilemap 'GonnaLostTrees' bulunamadý!");
         }
-
+        
+        
         Destroy(gameObject);
         
     
