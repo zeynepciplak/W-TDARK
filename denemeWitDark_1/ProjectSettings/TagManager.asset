@@ -45,6 +45,9 @@ TagManager:
   - name: Back_Wall_2
     uniqueID: 3520080587
     locked: 0
+  - name: Enemy
+    uniqueID: 1513071963
+    locked: 0
   - name: Ground
     uniqueID: 3531922285
     locked: 0
@@ -59,9 +62,6 @@ TagManager:
     locked: 0
   - name: Circle
     uniqueID: 3687503695
-    locked: 0
-  - name: Enemy
-    uniqueID: 1513071963
     locked: 0
   - name: GonnaLostTrees
     uniqueID: 2955398745

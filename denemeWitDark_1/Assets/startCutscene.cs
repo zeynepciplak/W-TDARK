@@ -32,7 +32,7 @@ public class startCutscene : MonoBehaviour
 
             isCutsceneOn = true;
             canAnim.SetBool("cutscene1", true);
-            Invoke(nameof(StopCutscene), 3f);
+            Invoke(nameof(StopCutscene), 5f);
         }
     }
 
