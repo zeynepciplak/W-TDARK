@@ -42,10 +42,10 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Back_Wall_2
+  - name: Back_Wall_2 = ?
     uniqueID: 3520080587
     locked: 0
-  - name: Enemy
+  - name: Hikaye
     uniqueID: 1513071963
     locked: 0
   - name: Ground
