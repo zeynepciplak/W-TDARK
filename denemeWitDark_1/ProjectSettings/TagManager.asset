@@ -3,8 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Tree
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -12,7 +11,7 @@ TagManager:
   - 
   - Water
   - UI
-  - Trees
+  - 
   - 
   - 
   - 
@@ -39,51 +38,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 2424153585
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Back_Wall_2 = ?
-    uniqueID: 3520080587
-    locked: 0
-  - name: Hikaye
-    uniqueID: 1513071963
-    locked: 0
-  - name: Ground
-    uniqueID: 3531922285
-    locked: 0
-  - name: "k\xF6y zemini"
-    uniqueID: 643773905
-    locked: 0
-  - name: Trees
-    uniqueID: 826089307
-    locked: 0
-  - name: Back_Wall
-    uniqueID: 4047340657
-    locked: 0
-  - name: Medicine
-    uniqueID: 1645389223
-    locked: 0
-  - name: Circle
-    uniqueID: 3687503695
-    locked: 0
-  - name: GonnaLostTrees
-    uniqueID: 2955398745
-    locked: 0
-  - name: Player
-    uniqueID: 4127301937
-    locked: 0
-  - name: NPC
-    uniqueID: 2652360733
-    locked: 0
-  - name: ev
-    uniqueID: 3716115689
-    locked: 0
-  - name: Wall
-    uniqueID: 2181259441
-    locked: 0
-  - name: Yeni_AltDuvar
-    uniqueID: 2445783395
-    locked: 0
-  - name: Items
-    uniqueID: 1455196031
+  - name: Foreground
+    uniqueID: 3928980359
     locked: 0
