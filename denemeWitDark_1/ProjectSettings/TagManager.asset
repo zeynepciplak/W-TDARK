@@ -84,3 +84,6 @@ TagManager:
   - name: Yeni_AltDuvar
     uniqueID: 2445783395
     locked: 0
+  - name: "E\u015Fyalar"
+    uniqueID: 1455196031
+    locked: 0
