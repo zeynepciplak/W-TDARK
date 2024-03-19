@@ -47,3 +47,39 @@ TagManager:
   - name: Foreground
     uniqueID: 3928980359
     locked: 0
+  - name: Back_Wall
+    uniqueID: 4149882167
+    locked: 0
+  - name: Ground
+    uniqueID: 3802377741
+    locked: 0
+  - name: water
+    uniqueID: 1143003501
+    locked: 0
+  - name: Yeni_AltDuvar
+    uniqueID: 1700690941
+    locked: 0
+  - name: GonnaLostTrees
+    uniqueID: 3797012363
+    locked: 0
+  - name: "k\xF6y zemini"
+    uniqueID: 3599393967
+    locked: 0
+  - name: "K\xF6y_Evleri"
+    uniqueID: 430528321
+    locked: 0
+  - name: Player
+    uniqueID: 1587600613
+    locked: 0
+  - name: Wall
+    uniqueID: 4028337837
+    locked: 0
+  - name: Trees
+    uniqueID: 1286487795
+    locked: 0
+  - name: Items
+    uniqueID: 429341355
+    locked: 0
+  - name: "Cal\u0131"
+    uniqueID: 2003848353
+    locked: 0
