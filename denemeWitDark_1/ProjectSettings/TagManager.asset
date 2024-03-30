@@ -51,6 +51,9 @@ TagManager:
   - name: Ground
     uniqueID: 3531922285
     locked: 0
+  - name: "k\xF6y zemini"
+    uniqueID: 643773905
+    locked: 0
   - name: Trees
     uniqueID: 826089307
     locked: 0
@@ -68,6 +71,12 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 4127301937
+    locked: 0
+  - name: NPC
+    uniqueID: 2652360733
+    locked: 0
+  - name: ev
+    uniqueID: 3716115689
     locked: 0
   - name: Wall
     uniqueID: 2181259441

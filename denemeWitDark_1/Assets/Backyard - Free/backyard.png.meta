@@ -491,7 +491,7 @@ TextureImporter:
       name: backyard_5
       rect:
         serializedVersion: 2
-        x: 241
+        x: 240
         y: 528
         width: 48
         height: 48
@@ -2296,7 +2296,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: e21dc45baed9c8e47ab61ed9d4b50f36
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
