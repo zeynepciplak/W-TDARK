@@ -56,19 +56,8 @@ public class startCutscene : MonoBehaviour
         {
             Debug.LogError("Tilemap 'GonnaLostTrees' bulunamadý!");
         }
-
-
-        // Set player position to (113, 30) after cutscene ends
-        GameObject player = GameObject.FindGameObjectWithTag("Player"); // Assuming your player has the "Player" tag
-        if (player != null)
-        {
-            player.transform.position = new Vector3(113f, 30f, 0f); // Set position based on your 2D or 3D environment
-        }
-        else
-        {
-            Debug.LogError("Player object not found!");
-        }
-
+        
+        
         Destroy(gameObject);
         
     

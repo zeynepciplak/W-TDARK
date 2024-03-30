@@ -3,9 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - DenemeTahtasi
-  - PlayerLight
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -58,6 +56,9 @@ TagManager:
   - name: water
     uniqueID: 1143003501
     locked: 0
+  - name: Yeni_AltDuvar
+    uniqueID: 1700690941
+    locked: 0
   - name: GonnaLostTrees
     uniqueID: 3797012363
     locked: 0
@@ -67,20 +68,14 @@ TagManager:
   - name: "K\xF6y_Evleri"
     uniqueID: 430528321
     locked: 0
-  - name: Radar_deneme
-    uniqueID: 1523282089
-    locked: 0
-  - name: "u\xE7"
-    uniqueID: 2117320643
-    locked: 0
   - name: Player
     uniqueID: 1587600613
     locked: 0
+  - name: Npc
+    uniqueID: 2185362015
+    locked: 0
   - name: Wall
     uniqueID: 4028337837
-    locked: 0
-  - name: Yeni_AltDuvar
-    uniqueID: 1700690941
     locked: 0
   - name: Trees
     uniqueID: 1286487795
@@ -90,7 +85,4 @@ TagManager:
     locked: 0
   - name: "Cal\u0131"
     uniqueID: 2003848353
-    locked: 0
-  - name: "DenemeTahtas\u0131"
-    uniqueID: 3504119049
     locked: 0
