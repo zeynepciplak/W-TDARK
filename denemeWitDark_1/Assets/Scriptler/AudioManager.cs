@@ -8,9 +8,13 @@ public class AudioManager : MonoBehaviour
 
     public AudioMixer musicMixer, effectMixer;
 
-    public AudioSource wotgAS,wotfAS,wotlAS,rainAS,thunderAS;
+    public AudioSource wotgAS , wotfAS , wotlAS ,rainAS ,thunderAS;
+
+    [Range(-80,20)]
+    public float effectVol, masterVol;
 
     public static AudioManager instance;
+
 
 
     private void Awake()
@@ -20,15 +24,29 @@ public class AudioManager : MonoBehaviour
             instance = this;
         }
     }
+
+    public void MasterVolume(){
+        musicMixer.SetFloat("masterVolume", masterVol);
+    }
+
+    public void EffectVolume(){
+
+        effectMixer.SetFloat("effectVolume", effectVol);
+
+    }
     void Start()
     {
+
+        PlayAudio(wotgAS);
+        PlayAudio(thunderAS);
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        MasterVolume();
+        EffectVolume();
     }
 
     public void PlayAudio(AudioSource audio)
@@ -36,3 +54,4 @@ public class AudioManager : MonoBehaviour
         audio.Play();
     }
 }
+//AudioManager.instance.Playaudio(AudioManager.instance.ses);
