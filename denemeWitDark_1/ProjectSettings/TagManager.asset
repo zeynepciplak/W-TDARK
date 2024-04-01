@@ -75,6 +75,9 @@ TagManager:
   - name: Player
     uniqueID: 1587600613
     locked: 0
+  - name: Npc
+    uniqueID: 2185362015
+    locked: 0
   - name: Wall
     uniqueID: 4028337837
     locked: 0
