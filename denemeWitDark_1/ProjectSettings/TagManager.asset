@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - DenemeTahtasi
+  - PlayerLight
   layers:
   - Default
   - TransparentFX
@@ -92,7 +93,4 @@ TagManager:
     locked: 0
   - name: Trees
     uniqueID: 1286487795
-    locked: 0
-  - name: Items
-    uniqueID: 429341355
     locked: 0
