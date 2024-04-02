@@ -11,7 +11,7 @@ public class PlayerCtrl : MonoBehaviour
     public static float speedX, speedY;
     Rigidbody2D rb;
 
-    
+   
     /*
     // public float timeBeforeClosure = 60f; // Time before game closure in seconds
     public float restartTime = 10f;

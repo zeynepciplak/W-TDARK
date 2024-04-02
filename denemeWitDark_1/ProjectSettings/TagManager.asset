@@ -6,6 +6,7 @@ TagManager:
   tags:
   - DenemeTahtasi
   - PlayerLight
+  - NPC
   layers:
   - Default
   - TransparentFX
