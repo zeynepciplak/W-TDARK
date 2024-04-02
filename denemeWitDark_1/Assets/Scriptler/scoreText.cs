@@ -1,11 +1,13 @@
+using System.Collections;
+using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class ScoreText : MonoBehaviour
 {
-     Text text; // text değişkeni oluşturuldu.
-
-    public static int coinAmount;
+    public TextMeshProUGUI text; // text değişkeni oluşturuldu.
+    public static int coinAmount = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -16,7 +18,10 @@ public class ScoreText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        text.text = coinAmount.ToString();
+        if (text != null) // Check if text is assigned before accessing it
+        {
+            text.text = coinAmount.ToString();
+        }
     }
    
 
