@@ -55,9 +55,6 @@ TagManager:
   - name: Ground
     uniqueID: 3802377741
     locked: 0
-  - name: water
-    uniqueID: 1143003501
-    locked: 0
   - name: "DenemeTahtas\u0131"
     uniqueID: 3437657341
     locked: 0
@@ -66,6 +63,9 @@ TagManager:
     locked: 0
   - name: "k\xF6y zemini"
     uniqueID: 3599393967
+    locked: 0
+  - name: water
+    uniqueID: 1143003501
     locked: 0
   - name: "K\xF6y_Evleri"
     uniqueID: 430528321
