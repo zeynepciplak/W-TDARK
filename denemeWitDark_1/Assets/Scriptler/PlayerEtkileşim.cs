@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-/*public class PlayerEtkileşim : MonoBehaviour
+public class PlayerEtkileşim : MonoBehaviour
 {
     public float interactionDistance = 3f; // NPC ile etkileşim mesafesi
     private GameObject currentNPC; // NPC ile etkileşimde bulunulan anki nesne
@@ -24,7 +23,10 @@ using UnityEngine;
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     // NPC'ye etkileşim fonksiyonunu çağır
-                    InteractWithNPC();
+                    // InteractWithNPC();
+                    // InteractWithNPC(currentNPC.GetComponent<NpcEtkileşim>());
+                    KonusmaBaslat(currentNPC.GetComponent<NpcKonusma>());
+                    Debug.Log("NABR");
                 }
             }
         }
@@ -35,15 +37,11 @@ using UnityEngine;
         }
     }
 
-    void InteractWithNPC()
+    void KonusmaBaslat(NpcKonusma npcKonusma)
     {
-        // NPC'yi kontrol et
-        NpcEtkileşim npcInteraction = currentNPC.GetComponent<NpcEtkileşim>();
-        if (npcInteraction != null)
+        if (npcKonusma != null)
         {
-            // NPC'nin etkileşime yanıt vermesini sağla
-            npcInteraction.RespondToInteraction();
+            npcKonusma.KonusmayaBasla();
         }
     }
 }
-*/
