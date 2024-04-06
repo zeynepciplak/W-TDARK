@@ -15,7 +15,7 @@ public class PlayerCtrl : MonoBehaviour
     bool isWalkingOnBush;
     bool isWalkingOnStone;
 
-    public AudioManager audioManager;
+    //public AudioManager audioManager;
 
     void Start()
     {
@@ -24,7 +24,7 @@ public class PlayerCtrl : MonoBehaviour
         // movSpeed = 25; 
 
         rb = GetComponent<Rigidbody2D>();
-        audioManager = FindObjectOfType<AudioManager>();
+        // audioManager = FindObjectOfType<AudioManager>();
        
     }
 
@@ -43,7 +43,7 @@ public class PlayerCtrl : MonoBehaviour
 
 
 
-
+        /*
         if (elapsedTime >= restartTime)
         {
             RestartGame();
@@ -51,12 +51,15 @@ public class PlayerCtrl : MonoBehaviour
         */
 
         // Karakter yÃ¼rÃ¼rken wotf sesi Ã§al
+        
+        /*
         if (rb.velocity.magnitude > 0 && !isWalkingOnBush && !isWalkingOnStone)
         {
             audioManager.PlayAudio(audioManager.wotgAS);
         }
        
     }
+        */
 
    /* void OnTriggerEnter2D(Collider2D collision)
     {
