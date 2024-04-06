@@ -17,23 +17,53 @@ using static UnityEngine.RuleTile.TilingRuleOutput;
     }
 }
 */
-public class NpcEtkileşim : MonoBehaviour { 
-private void OnTriggerEnter2D(Collider2D collision)
+
+/*
+public class NpcEtkileşim : MonoBehaviour
 {
-    /*
-    if (collision.gameObject.CompareTag("Player")) // Check if colliding with "Player" tag
-    {
-        ScoreText.coinAmount += 1;
-        Destroy(gameObject);
-    }
-    */
-    if (collision.gameObject.CompareTag("Player"))
+    // NPC'nin etkileşim sırasında söyleyeceği mesaj
+    public string interactionMessage = "Merhaba, nasıl yardımcı olabilirim?";
 
+    // Etkileşim gerçekleştiğinde çağrılacak fonksiyon
+    public void RespondToInteraction()
     {
-            Debug.Log("Npc ile etkileşime girdiniz.");
+        Debug.Log(interactionMessage);
+        // Debug.Log($"{otherNpc.name} ile etkileşime girildi!");
     }
-    
-
 }
-    
+*/
+
+public class NpcKonusma : MonoBehaviour
+{
+    // NPC'nin konuşma metni
+    public string[] konusmaMetni;
+
+    private int metinIndex = 0; // Konuşma metninde hangi metnin gösterileceğini takip eden değişken
+
+    void Start()
+    {
+        // Metin dosyasını oku
+        konusmaMetni = new string[] { "Merhaba, nasıl yardımcı olabilirim?" };
+
+        // Dizi boyutunu kontrol et
+        if (konusmaMetni.Length <= metinIndex)
+        {
+            Debug.LogError("Dizi boyutu yetersiz!");
+        }
+    }
+
+    public void KonusmayaBasla()
+    {
+        // Konuşma metnini göster
+        if (metinIndex < konusmaMetni.Length)
+        {
+            Debug.Log(konusmaMetni[metinIndex]);
+            metinIndex++;
+        }
+        else
+        {
+            // Konuşma bittiğinde metin indexini sıfırla
+            metinIndex = 0;
+        }
+    }
 }

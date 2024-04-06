@@ -17,17 +17,12 @@ public class PlayerCtrl : MonoBehaviour
 
     public AudioManager audioManager;
 
-   
-    /*
-    // public float timeBeforeClosure = 60f; // Time before game closure in seconds
-    public float restartTime = 10f;
-    private float elapsedTime = 0f;
-    */
-
     void Start()
     {
-        movSpeed = 25;
-        // movSpeed = 3;
+        movSpeed = 5;
+        // Kodlama esnasýnda kolaylýk saðlamasý için
+        // movSpeed = 25; 
+
         rb = GetComponent<Rigidbody2D>();
         audioManager = FindObjectOfType<AudioManager>();
        
@@ -36,13 +31,18 @@ public class PlayerCtrl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
         speedX = Input.GetAxisRaw("Horizontal") * movSpeed;
         speedY = Input.GetAxisRaw("Vertical") * movSpeed;
         rb.velocity = new Vector2(speedX, speedY);
+    }
+}
 
-        /*
-        elapsedTime += Time.deltaTime;
+
+
+
+
+
+
 
         if (elapsedTime >= restartTime)
         {
@@ -50,7 +50,7 @@ public class PlayerCtrl : MonoBehaviour
         }
         */
 
-        // Karakter yürürken wotf sesi çal
+        // Karakter yÃ¼rÃ¼rken wotf sesi Ã§al
         if (rb.velocity.magnitude > 0 && !isWalkingOnBush && !isWalkingOnStone)
         {
             audioManager.PlayAudio(audioManager.wotgAS);
@@ -60,14 +60,14 @@ public class PlayerCtrl : MonoBehaviour
 
    /* void OnTriggerEnter2D(Collider2D collision)
     {
-        // Çalılardan geçerken wot sesi çal
+        // ÃalÄ±lardan geÃ§erken wot sesi Ã§al
         if (collision.CompareTag("Bush"))
         {
             isWalkingOnBush = true;
             audioManager.PlayAudio(audioManager.wotfAS);
         }
 
-        // Taşın üstünden geçerken 3. sesi çal
+        // TaÅÄ±n Ã¼stÃ¼nden geÃ§erken 3. sesi Ã§al
         if (collision.CompareTag("Stone"))
         {
             isWalkingOnStone = true;
@@ -77,7 +77,7 @@ public class PlayerCtrl : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D collision)
     {
-        // Çalılardan veya taşın üstünden çıkınca sesi durdur
+        // ÃalÄ±lardan veya taÅÄ±n Ã¼stÃ¼nden Ã§Ä±kÄ±nca sesi durdur
         if (collision.CompareTag("Bush"))
         {
             isWalkingOnBush = false;
@@ -88,6 +88,7 @@ public class PlayerCtrl : MonoBehaviour
             isWalkingOnStone = false;
         }
     }
+
 
 
     /*
@@ -104,4 +105,4 @@ public class PlayerCtrl : MonoBehaviour
 
 
 
-}
+

@@ -10,3 +10,5 @@ public class Rotator : MonoBehaviour
         transform.Rotate(Vector3.forward * -rotationSpeed * Time.deltaTime);
     }
 }
+
+
