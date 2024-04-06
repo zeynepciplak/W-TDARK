@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:denemeWitDark_1/Assets/Scriptler/Follower.cs.meta
+guid: aaccfdf43ca432d478cb8f349f3bbdd4
+========
 guid: 72490e3bd04dde748ae22c1ff14662ba
+>>>>>>>> main:denemeWitDark_1/Assets/Radar.cs.meta
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2

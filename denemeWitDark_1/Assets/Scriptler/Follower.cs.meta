@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:denemeWitDark_1/Assets/Scriptler/Rotator.cs.meta
+guid: 52f8f7bc16a6c71489aa2ae741ea0304
+========
 guid: 49fcdb49fd1db254fa1131e3db0fb512
+>>>>>>>> main:denemeWitDark_1/Assets/Scriptler/Follower.cs.meta
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2

@@ -6,18 +6,26 @@ using UnityEngine.SceneManagement;
 
 public class PlayerCtrl : MonoBehaviour
 {
+
+
     // public static float movSpeed = 5;
     public static float movSpeed;
     public static float speedX, speedY;
     Rigidbody2D rb;
+    bool isWalkingOnBush;
+    bool isWalkingOnStone;
+
+    public AudioManager audioManager;
 
     void Start()
     {
         movSpeed = 5;
-        // Kodlama esnas�nda kolayl�k sa�lamas� i�in
+        // Kodlama esnasýnda kolaylýk saðlamasý için
         // movSpeed = 25; 
 
         rb = GetComponent<Rigidbody2D>();
+        audioManager = FindObjectOfType<AudioManager>();
+       
     }
 
     // Update is called once per frame
@@ -32,6 +40,54 @@ public class PlayerCtrl : MonoBehaviour
 
 
 
+
+
+
+
+        if (elapsedTime >= restartTime)
+        {
+            RestartGame();
+        }
+        */
+
+        // Karakter yÃ¼rÃ¼rken wotf sesi Ã§al
+        if (rb.velocity.magnitude > 0 && !isWalkingOnBush && !isWalkingOnStone)
+        {
+            audioManager.PlayAudio(audioManager.wotgAS);
+        }
+       
+    }
+
+   /* void OnTriggerEnter2D(Collider2D collision)
+    {
+        // ÃalÄ±lardan geÃ§erken wot sesi Ã§al
+        if (collision.CompareTag("Bush"))
+        {
+            isWalkingOnBush = true;
+            audioManager.PlayAudio(audioManager.wotfAS);
+        }
+
+        // TaÅÄ±n Ã¼stÃ¼nden geÃ§erken 3. sesi Ã§al
+        if (collision.CompareTag("Stone"))
+        {
+            isWalkingOnStone = true;
+            audioManager.PlayAudio(audioManager.wotlAS);
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        // ÃalÄ±lardan veya taÅÄ±n Ã¼stÃ¼nden Ã§Ä±kÄ±nca sesi durdur
+        if (collision.CompareTag("Bush"))
+        {
+            isWalkingOnBush = false;
+        }
+
+        if (collision.CompareTag("Stone"))
+        {
+            isWalkingOnStone = false;
+        }
+    }
 
 
 
