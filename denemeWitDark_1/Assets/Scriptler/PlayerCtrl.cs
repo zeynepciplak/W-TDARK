@@ -9,7 +9,7 @@ public class PlayerCtrl : MonoBehaviour
 
 
     // public static float movSpeed = 5;
-    public static float movSpeed = 25;
+    public static float movSpeed;
     public static float speedX, speedY;
     Rigidbody2D rb;
     bool isWalkingOnBush;
@@ -17,7 +17,7 @@ public class PlayerCtrl : MonoBehaviour
 
     public AudioManager audioManager;
 
-    
+   
     /*
     // public float timeBeforeClosure = 60f; // Time before game closure in seconds
     public float restartTime = 10f;
@@ -26,6 +26,8 @@ public class PlayerCtrl : MonoBehaviour
 
     void Start()
     {
+        movSpeed = 25;
+        // movSpeed = 3;
         rb = GetComponent<Rigidbody2D>();
         audioManager = FindObjectOfType<AudioManager>();
        

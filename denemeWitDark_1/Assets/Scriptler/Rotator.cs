@@ -1,23 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Rotator : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-    public float rotationSpeed = 10.0f; // Dönüþ hýzý
-    // Update is called once per frame
+    public float rotationSpeed = 100f; // Dönme hýzý (derece/saniye)
+
     void Update()
     {
-        // Kare objenizin tam tersi yönde dönmesi için
-        transform.Rotate(-Vector3.forward * rotationSpeed * Time.deltaTime);
-
-        // Alternatif olarak, rotationSpeed deðerini negatif yapabilirsiniz
-        //transform.Rotate(Vector3.forward * -rotationSpeed * Time.deltaTime);
-
+        // Her saniye, transform.Rotate() fonksiyonu ile nesneyi Z ekseni etrafýnda döndürürüz.
+        transform.Rotate(Vector3.forward * -rotationSpeed * Time.deltaTime);
     }
 }

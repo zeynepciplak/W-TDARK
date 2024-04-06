@@ -10,7 +10,7 @@ public class startCutscene : MonoBehaviour
 
     
     private TilemapRenderer yeniAltDuvarRenderer;
-    // Her biri iï¿½in mi yapmam gerekiyor dedirtti
+    // Her biri için mi yapmam gerekiyor dedirtti
     private TilemapCollider2D yeniAltDuvarCollider;
     void Start()
     {
@@ -33,17 +33,7 @@ public class startCutscene : MonoBehaviour
             isCutsceneOn = true;
             canAnim.SetBool("cutscene1", true);
             Invoke(nameof(StopCutscene), 5f);
-
-
-            AudioManager.instance.PlayAudio(AudioManager.instance.thunderAS);
-
-
-            
-
-
         }
-
-
     }
 
     void StopCutscene()
@@ -56,7 +46,25 @@ public class startCutscene : MonoBehaviour
 
         yeniAltDuvarCollider.enabled = true;
 
-        // Tilemap'i ismine gï¿½re bulun (benzersiz olduï¿½unu varsayarak)
+
+
+
+        /*
+        // Deactivate the Light2D object
+        GameObject light2DObject = GameObject.Find("Light 2D"); // Replace with the actual name of your Light2D object
+        if (light2DObject != null)
+        {
+            light2DObject.SetActive(false);
+        }
+        else
+        {
+            Debug.LogError("Light2D object not found!");
+        }
+        */
+
+
+
+        // Tilemap'i ismine göre bulun (benzersiz olduðunu varsayarak)
         GameObject tilemapObject = GameObject.Find("GonnaLostTrees");
         if (tilemapObject != null)
         {
@@ -64,7 +72,7 @@ public class startCutscene : MonoBehaviour
         }
         else
         {
-            Debug.LogError("Tilemap 'GonnaLostTrees' bulunamadï¿½!");
+            Debug.LogError("Tilemap 'GonnaLostTrees' bulunamadý!");
         }
 
 
@@ -80,7 +88,7 @@ public class startCutscene : MonoBehaviour
         }
 
         Destroy(gameObject);
-        
-    
+
+
     }
 }
