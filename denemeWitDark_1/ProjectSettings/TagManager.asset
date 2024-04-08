@@ -8,6 +8,9 @@ TagManager:
   - PlayerLight
   - NPC
   - coin
+  - stone
+  - ground
+  - cali
   layers:
   - Default
   - TransparentFX
