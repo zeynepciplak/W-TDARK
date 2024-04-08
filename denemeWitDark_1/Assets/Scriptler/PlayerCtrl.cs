@@ -12,10 +12,12 @@ public class PlayerCtrl : MonoBehaviour
     public static float movSpeed;
     public static float speedX, speedY;
     Rigidbody2D rb;
-    bool isWalkingOnBush;
+    bool isWalkingOnGrass;
     bool isWalkingOnStone;
 
-    //public AudioManager audioManager;
+    bool isWalkingOnForest;
+
+    public AudioManager audioManager;
 
     void Start()
     {
@@ -24,7 +26,7 @@ public class PlayerCtrl : MonoBehaviour
         // movSpeed = 25; 
 
         rb = GetComponent<Rigidbody2D>();
-        // audioManager = FindObjectOfType<AudioManager>();
+        audioManager = AudioManager.instance;
        
     }
 
@@ -35,6 +37,45 @@ public class PlayerCtrl : MonoBehaviour
         speedY = Input.GetAxisRaw("Vertical") * movSpeed;
         rb.velocity = new Vector2(speedX, speedY);
     }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("ground"))
+        {
+            isWalkingOnForest = true;
+            audioManager.PlayAudio(audioManager.wotfAS); // Normal yol üzerinde wotf sesini çal
+        }
+        if (collision.CompareTag("cali"))
+        {
+            isWalkingOnGrass = true;
+            audioManager.PlayAudio(audioManager.wotgAS); // Çalıya girdiğinde wotf sesini çal
+        }
+
+        if (collision.CompareTag("stone"))
+        {
+            isWalkingOnStone = true;
+            audioManager.PlayAudio(audioManager.wotlAS); // Logoya girdiğinde wotl sesini çal
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D collision)
+    {   
+        if (collision.CompareTag("ground"))
+        {
+            isWalkingOnForest = false;
+        }
+        if (collision.CompareTag("cali"))
+        {
+            isWalkingOnGrass = false;
+        }
+
+        if (collision.CompareTag("stone"))
+        {
+            isWalkingOnStone = false;
+        }
+    }
+
+
 }
 
 
