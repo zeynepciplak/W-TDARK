@@ -7,7 +7,6 @@ TagManager:
   - DenemeTahtasi
   - PlayerLight
   - NPC
-  - coin
   layers:
   - Default
   - TransparentFX
