@@ -3,7 +3,24 @@ guid: 07f78720174c54841959eec36ba38be6
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - musicMixer: {fileID: 24100000, guid: 8176a31371c4841768e3f7a5becb839a, type: 2}
+  - effectMixer: {fileID: 24100000, guid: a4826184c64134ba298c7c2a543df8da, type: 2}
+  - coinAS: {instanceID: 0}
+  - hitAS: {instanceID: 0}
+  - bgmAS: {instanceID: 0}
+  - rainAS: {instanceID: 0}
+  - thunderAS: {instanceID: 0}
+  - raindropsAS: {instanceID: 0}
+  - churchBellAS: {instanceID: 0}
+  - pickUpItemAS: {instanceID: 0}
+  - hitTheWallAS: {instanceID: 0}
+  - hitTheTreeAS: {instanceID: 0}
+  - wotfAS: {instanceID: 0}
+  - wotgAS: {instanceID: 0}
+  - wotlAS: {instanceID: 0}
+  - windInTreeAS: {instanceID: 0}
+  - riverAS: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

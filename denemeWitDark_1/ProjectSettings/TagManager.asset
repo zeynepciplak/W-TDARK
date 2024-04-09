@@ -11,6 +11,7 @@ TagManager:
   - stone
   - ground
   - cali
+  - wall
   layers:
   - Default
   - TransparentFX

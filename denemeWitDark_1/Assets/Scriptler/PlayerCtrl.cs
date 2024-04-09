@@ -21,9 +21,9 @@ public class PlayerCtrl : MonoBehaviour
 
     void Start()
     {
-        movSpeed = 5;
+       // movSpeed = 5;
         // Kodlama esnasýnda kolaylýk saðlamasý için
-        // movSpeed = 25; 
+         movSpeed = 25; 
 
         rb = GetComponent<Rigidbody2D>();
         audioManager = AudioManager.instance;
@@ -36,6 +36,13 @@ public class PlayerCtrl : MonoBehaviour
         speedX = Input.GetAxisRaw("Horizontal") * movSpeed;
         speedY = Input.GetAxisRaw("Vertical") * movSpeed;
         rb.velocity = new Vector2(speedX, speedY);
+
+        // Karakterin hareket ettiğini kontrol et
+        if (rb.velocity.magnitude > 0.1f)
+        {
+            // Hareket halindeyken yaklaşan ses efektini çal
+            PlayApproachingSound();
+        }
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -56,6 +63,15 @@ public class PlayerCtrl : MonoBehaviour
             isWalkingOnStone = true;
             audioManager.PlayAudio(audioManager.wotlAS); // Logoya girdiğinde wotl sesini çal
         }
+
+        if (collision.CompareTag("wall")) // Duvar gridine çarpma kontrolü
+        {
+            // AudioManager üzerinden hitAS sesini çal
+            if (audioManager != null && audioManager.hitAS != null)
+            {
+                audioManager.PlayAudio(audioManager.hitAS);
+            }
+        }
     }
 
     void OnTriggerExit2D(Collider2D collision)
@@ -75,6 +91,36 @@ public class PlayerCtrl : MonoBehaviour
         }
     }
 
+void PlayApproachingSound()
+    {
+        // AudioManager'dan yaklaşan ses efektini çal
+        if (audioManager != null && audioManager.churchBellAS != null)
+        {
+            // Karakterin hızına göre ses seviyesini belirle (örneğin, hareket hızıyla orantılı olarak sesi yükselt)
+            float volume = rb.velocity.magnitude * 0.1f; // Hız ile ses seviyesi arasında doğru bir ilişki kurun
+            audioManager.churchBellAS.volume = volume;
+
+            // Ses efektini çal
+            audioManager.PlayAudio(audioManager.churchBellAS);
+
+            
+
+}
+    
+
+    if (collision.CompareTag("ground"))
+    {
+        isWalkingOnForest = true;
+        if (audioManager != null && audioManager.wotfAS != null)
+        {
+            audioManager.PlayAudio(audioManager.wotfAS);
+            Debug.Log("Normal yol üzerinde wotf sesi çalındı.");
+        }
+        else
+        {
+            Debug.LogWarning("Hata: AudioManager veya wotfAS null!");
+        }
+    }
 
 }
 

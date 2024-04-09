@@ -6,9 +6,17 @@ public class startCutscene : MonoBehaviour{
     public Animator canAnim;
     private TilemapRenderer yeniAltDuvarRenderer;
     private TilemapCollider2D yeniAltDuvarCollider;
+
+    public AudioManager audioManager;
+
+
     void Start(){
         yeniAltDuvarRenderer = GameObject.Find("Yeni_AltDuvar").GetComponent<TilemapRenderer>();
         yeniAltDuvarCollider = GameObject.Find("Yeni_AltDuvar").GetComponent<TilemapCollider2D>();
+
+        audioManager = AudioManager.instance;
+
+
     }
     void OnTriggerEnter2D(Collider2D collision){
         if (collision.tag == "Player")
@@ -35,7 +43,7 @@ public class startCutscene : MonoBehaviour{
         if (tilemapObject != null)
             Destroy(tilemapObject);
         else
-            Debug.LogError("Tilemap 'GonnaLostTrees' bulunamadý!");
+            Debug.LogError("Tilemap 'GonnaLostTrees' bulunamadï¿½!");
 
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         if (player != null)
