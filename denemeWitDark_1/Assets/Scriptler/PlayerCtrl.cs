@@ -12,10 +12,10 @@ public class PlayerCtrl : MonoBehaviour
     public static float movSpeed;
     public static float speedX, speedY;
     Rigidbody2D rb;
-    bool isWalkingOnGrass; // Çalı üzerinde mi yürünüyor?
-    bool isWalkingOnStone; // Taş üzerinde mi yürünüyor?
+    bool isWalkingOnGrass;
+    bool isWalkingOnStone;
 
-    bool isWalkingOnForest; // Orman zemininde mi yürünüyor?
+    bool isWalkingOnForest;
 
     public AudioManager audioManager;
 

@@ -6,15 +6,11 @@ public class coin : MonoBehaviour
 {
     private bool _collected = false;
 
-    private AudioManager audioManager;
-
 
     private Transform playerTransform; // Store Player's Transform component
 
     void Start()
     {
-        // AudioManager'Ä±n instance'Ä±nÄ± alarak referansÄ± elde et
-        audioManager = AudioManager.instance;
         // Find the GameObject with "Player" tag (assuming it has a Transform component)
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
     }
@@ -34,12 +30,6 @@ public class coin : MonoBehaviour
         {
             if (!_collected)
             {
-                // coinAS sesini AudioManager Ã¼zerinden Ã§al
-            if (audioManager != null && audioManager.coinAS != null)
-            {
-                audioManager.PlayAudio(audioManager.coinAS);
-            }
-
                 ScoreText.coinAmount += 1;
                 _collected = true;// Not needed if destroying the game object
                 Destroy(this.gameObject);// Only use if you intend to destroy the game object
@@ -137,7 +127,7 @@ public class coin : MonoBehaviour
             }
             else
             {
-                Debug.Log("Distance to Player: " + distance + " units"); // Yazdï¿½rma formatï¿½ deï¿½iï¿½meden devam
+                Debug.Log("Distance to Player: " + distance + " units"); // Yazdýrma formatý deðiþmeden devam
             }
 
 
