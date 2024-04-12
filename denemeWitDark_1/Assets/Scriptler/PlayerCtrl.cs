@@ -4,27 +4,28 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
+
 public class PlayerCtrl : MonoBehaviour
 {
+
+[SerializeField] float speed;
 
 
     // public static float movSpeed = 5;
     public static float movSpeed;
     public static float speedX, speedY;
-    Rigidbody2D rb;
-    bool isWalkingOnBush;
-    bool isWalkingOnStone;
-
-    //public AudioManager audioManager;
+    private Rigidbody2D rb;
+    
+    
 
     void Start()
     {
-        movSpeed = 5;
+        movSpeed = 25;
         // Kodlama esnasýnda kolaylýk saðlamasý için
         // movSpeed = 25; 
 
         rb = GetComponent<Rigidbody2D>();
-        // audioManager = FindObjectOfType<AudioManager>();
        
     }
 
@@ -34,7 +35,10 @@ public class PlayerCtrl : MonoBehaviour
         speedX = Input.GetAxisRaw("Horizontal") * movSpeed;
         speedY = Input.GetAxisRaw("Vertical") * movSpeed;
         rb.velocity = new Vector2(speedX, speedY);
+       
     }
+
+
 }
 
 
