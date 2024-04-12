@@ -8,7 +8,7 @@ public class AudioManager : MonoBehaviour
 
     public AudioMixer musicMixer, effectMixer;
 
-    public AudioSource audioSource, coinAS, hitAS, bgmAS, rainAS, 
+    public AudioSource coinAS, hitAS, bgmAS, rainAS, 
     thunderAS, raindropsAS, churchBellAS, pickUpItemAS,
      hitTheWallAS, hitTheTreeAS, wotfAS, wotgAS, wotlAS, windInTreeAS, riverAS; 
 
@@ -26,13 +26,17 @@ private void Awake()
 // Start is called before the first frame update
     void Start()
     {
-        audioSource = GetComponent<AudioSource>();
         
+        PlayAudio(bgmAS);
     }
 
 
     public void PlayAudio(AudioSource audio)
     {
         audio.Play();
+    }
+
+    private void footStep(){
+        
     }
 }
