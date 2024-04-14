@@ -1,0 +1,5 @@
+{ec561a59-c71f-4de2-9eaf-7f73dd61c977} bank:/Master
+{744b3a8d-b664-01a0-18e6-f58d2c92cfef} bank:/Master.strings
+{5fe7ca53-5a1a-4e0f-8ed2-15264e4e7b89} bus:/
+{a21456f7-ec20-435b-9811-d22754d28c63} bus:/Reverb
+{c2c9cf8c-bdc6-4885-a2c7-352b7a7ee582} event:/Soundscape
