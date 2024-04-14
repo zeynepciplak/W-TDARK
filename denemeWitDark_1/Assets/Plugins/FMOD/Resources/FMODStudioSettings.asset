@@ -453,8 +453,8 @@ MonoBehaviour:
   switchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: ../../events/Fmod Events Mitte/Fmod Events Mitte.fspro
-  sourceBankPath: ../../events/Fmod Events Mitte/Build
+  sourceProjectPath: events/Fmod Events Mitte/Fmod Events Mitte.fspro
+  sourceBankPath: events/Fmod Events Mitte/Build
   sourceBankPathUnformatted: 
   BankRefreshCooldown: 5
   ShowBankRefreshWindow: 1
