@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="DataFile" id="{3a0330d3-7c62-4efc-a658-23df178a5d00}">
+		<property name="assetPath">
+			<value>Audio/chipsHandle1 2.ogg.meta</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{d1dfd176-3792-46a2-9e26-6cb0f7ba0814}</destination>
+		</relationship>
+	</object>
+</objects>
