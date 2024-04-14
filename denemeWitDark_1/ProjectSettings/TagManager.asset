@@ -11,6 +11,8 @@ TagManager:
   - ground
   - stone
   - cali
+  - kum
+  - water
   layers:
   - Default
   - TransparentFX
