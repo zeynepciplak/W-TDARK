@@ -180,6 +180,26 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 28500
+--- !u!114 &-3259208128124708022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/SFX.bank
+  m_EditorClassIdentifier: 
+  Path: events/Fmod Events Mitte/Build/Desktop/SFX.bank
+  Name: SFX
+  StudioPath: bank:/SFX
+  lastModified: 638489698157794795
+  FileSizes:
+  - Name: Desktop
+    Value: 5248
+  Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -195,6 +215,7 @@ MonoBehaviour:
   EditorBanks:
   - {fileID: 5634172947188463551}
   - {fileID: 21587895135807049}
+  - {fileID: -3259208128124708022}
   EditorEvents:
   - {fileID: 3093242451552446793}
   - {fileID: 5436197409695890386}
@@ -202,12 +223,13 @@ MonoBehaviour:
   - {fileID: -6839343664942196423}
   - {fileID: -8839604071232406259}
   - {fileID: -5488847894050259517}
+  - {fileID: 9129025485793722382}
   EditorParameters: []
   MasterBanks:
   - {fileID: 21587895135807049}
   StringsBanks:
   - {fileID: 5634172947188463551}
-  cacheTime: 638489654627024428
+  cacheTime: 638489698157794795
   cacheVersion: 131617
 --- !u!114 &21587895135807049
 MonoBehaviour:
@@ -224,7 +246,7 @@ MonoBehaviour:
   Path: events/Fmod Events Mitte/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638489654627003253
+  lastModified: 638489698157461752
   FileSizes:
   - Name: Desktop
     Value: 10635424
@@ -326,8 +348,35 @@ MonoBehaviour:
   Path: events/Fmod Events Mitte/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638489654627024428
+  lastModified: 638489698157484258
   FileSizes:
   - Name: Desktop
-    Value: 1144
+    Value: 1234
   Exists: 1
+--- !u!114 &9129025485793722382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/CoinCollected
+  m_EditorClassIdentifier: 
+  Path: event:/CoinCollected
+  Guid:
+    Data1: -818306304
+    Data2: 1094226274
+    Data3: 1709487770
+    Data4: 1174900057
+  Banks:
+  - {fileID: -3259208128124708022}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
