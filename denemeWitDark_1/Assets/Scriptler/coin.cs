@@ -1,7 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMODUnity;
 
+
+[RequireComponent(typeof(StudioEventEmitter))]
 
 public class coin : MonoBehaviour
 {
@@ -14,14 +17,19 @@ public class coin : MonoBehaviour
 
     private Transform playerTransform; // Store Player's Transform component
 
+    private StudioEventEmitter emitter;
+
     void Start()
     {
         
        // audioManager = AudioManager.instance;
         // Find the GameObject with "Player" tag (assuming it has a Transform component)
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
-    }
 
+        emitter= AudioManager.instance.InitializeEventEmitter(FMODEvents.instance.coinIdle, this.gameObject);
+        emitter.Play();
+    }
+ 
 
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -45,6 +53,8 @@ public class coin : MonoBehaviour
                 ScoreText.coinAmount += 1;
                 _collected = true;// Not needed if destroying the game object
                 Destroy(this.gameObject);// Only use if you intend to destroy the game object
+               
+               emitter.Stop();
                 AudioManager.instance.PlayOneShot(FMODEvents.instance.coinCollected, this.playerTransform.position);
 
             }
