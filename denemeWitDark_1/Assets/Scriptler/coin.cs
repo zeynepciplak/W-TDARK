@@ -43,9 +43,9 @@ public class coin : MonoBehaviour
         */
         if (collision.gameObject.CompareTag("Player") )
         {
-            if (!_collected)
+         if (!_collected)
             {
-           /*      // coinAS sesini AudioManager üzerinden çal
+           /*     // coinAS sesini AudioManager üzerinden çal
             if (audioManager != null && audioManager.coinAS != null)
             {
                 audioManager.PlayAudio(audioManager.coinAS);

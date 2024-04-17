@@ -21,7 +21,7 @@ public class PlayerCtrl : MonoBehaviour
 
     void Start()
     {
-        movSpeed = 25;
+        movSpeed = 5;
         // Kodlama esnasýnda kolaylýk saðlamasý için
         // movSpeed = 25; 
 
