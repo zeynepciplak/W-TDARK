@@ -2,18 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class coin : MonoBehaviour
 {
-    private bool _collected = false;
+    
+    
 
-    private AudioManager audioManager;
+        private bool _collected = false;
+
+    //private AudioManager audioManager;
 
     private Transform playerTransform; // Store Player's Transform component
 
     void Start()
     {
         
-        audioManager = AudioManager.instance;
+       // audioManager = AudioManager.instance;
         // Find the GameObject with "Player" tag (assuming it has a Transform component)
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
     }
@@ -33,14 +37,16 @@ public class coin : MonoBehaviour
         {
             if (!_collected)
             {
-                 // coinAS sesini AudioManager üzerinden çal
+           /*      // coinAS sesini AudioManager üzerinden çal
             if (audioManager != null && audioManager.coinAS != null)
             {
                 audioManager.PlayAudio(audioManager.coinAS);
-            }
+            }*/
                 ScoreText.coinAmount += 1;
                 _collected = true;// Not needed if destroying the game object
                 Destroy(this.gameObject);// Only use if you intend to destroy the game object
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.coinCollected, this.playerTransform.position);
+
             }
         }
         if (collision.gameObject.CompareTag("PlayerLight"))
