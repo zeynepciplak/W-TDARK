@@ -26,9 +26,6 @@ public class TutorialCutscene : MonoBehaviour
                       "WitDark evreninde baþarýlar yoldaþ");
             Invoke(nameof(StopCutscene), 5f);
             
-
-
-
         }
     }
 

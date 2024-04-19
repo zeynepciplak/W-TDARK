@@ -22,7 +22,7 @@ public class PlayerCtrl : MonoBehaviour
     void Start()
     {
         movSpeed = 5;
-        // Kodlama esnasýnda kolaylýk saðlamasý için
+        // Kodlama esnasinda kolaylik saglamasi icin
         // movSpeed = 25; 
 
         rb = GetComponent<Rigidbody2D>();
@@ -32,10 +32,22 @@ public class PlayerCtrl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        speedX = Input.GetAxisRaw("Horizontal") * movSpeed;
-        speedY = Input.GetAxisRaw("Vertical") * movSpeed;
-        rb.velocity = new Vector2(speedX, speedY);
        
+        if(Input.GetKey(KeyCode.LeftShift))
+        {
+            movSpeed = 10;
+            speedX = Input.GetAxisRaw("Horizontal") * movSpeed;
+            speedY = Input.GetAxisRaw("Vertical") * movSpeed;
+            rb.velocity = new Vector2(speedX, speedY);
+        }
+        else
+        {
+            movSpeed = 5;
+            speedX = Input.GetAxisRaw("Horizontal") * movSpeed;
+            speedY = Input.GetAxisRaw("Vertical") * movSpeed;
+            rb.velocity = new Vector2(speedX, speedY);
+        }
+
     }
 
 
