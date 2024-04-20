@@ -54,6 +54,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 7500
+--- !u!114 &-8639088787757961783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Soundscape
+  m_EditorClassIdentifier: 
+  Path: event:/Soundscape
+  Guid:
+    Data1: -1026961524
+    Data2: 1216724422
+    Data3: 724944802
+    Data4: -2098889094
+  Banks:
+  - {fileID: -5018492769079277654}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 91116
 --- !u!114 &-8477581988176042444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -285,6 +312,77 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 28500
+--- !u!114 &-5339961761279570806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Vibration
+  m_EditorClassIdentifier: 
+  Path: event:/Vibration
+  Guid:
+    Data1: 1666464486
+    Data2: 1118259082
+    Data3: -881690705
+    Data4: -598285018
+  Banks:
+  - {fileID: -5018492769079277654}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-5018492769079277654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: events/Fmod Events Mitte/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 638492473779574501
+  FileSizes:
+  - Name: Desktop
+    Value: 10635424
+  Exists: 1
+--- !u!114 &-4665771832032502825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Footsteps/Dirt
+  m_EditorClassIdentifier: 
+  Name: Dirt
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3709828534
+    data2: 1209820526
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-3259208128124708022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -376,6 +474,104 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-1755399902657216477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/SFX.bank
+  m_EditorClassIdentifier: 
+  Path: events/Fmod Events Mitte/Build/Desktop/SFX.bank
+  Name: SFX
+  StudioPath: bank:/SFX
+  lastModified: 638492473779581115
+  FileSizes:
+  - Name: Desktop
+    Value: 826688
+  Exists: 1
+--- !u!114 &-1336033178744578359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Footsteps/Water
+  m_EditorClassIdentifier: 
+  Name: Water
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3565782430
+    data2: 1523963356
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-1119095198432628187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Waves
+  m_EditorClassIdentifier: 
+  Path: event:/Waves
+  Guid:
+    Data1: 594101181
+    Data2: 1263020202
+    Data3: -1270956142
+    Data4: -147085568
+  Banks:
+  - {fileID: -5018492769079277654}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 28500
+--- !u!114 &-727250429845705621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/CoinCollected
+  m_EditorClassIdentifier: 
+  Path: event:/CoinCollected
+  Guid:
+    Data1: -818306304
+    Data2: 1094226274
+    Data3: 1709487770
+    Data4: 1174900057
+  Banks:
+  - {fileID: -1755399902657216477}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -389,24 +585,24 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: -2947210614825958157}
-  - {fileID: 3498615135850414709}
-  - {fileID: 5303117461478394513}
+  - {fileID: 8843749774561703828}
+  - {fileID: -5018492769079277654}
+  - {fileID: -1755399902657216477}
   EditorEvents:
-  - {fileID: 2883560624925139279}
-  - {fileID: 5725423207184330180}
-  - {fileID: 7110367041369559509}
-  - {fileID: -7014791763080321841}
-  - {fileID: -1768590287331108696}
-  - {fileID: 7767614745915941462}
-  - {fileID: 1618706518363223307}
-  - {fileID: -8477581988176042444}
+  - {fileID: 1830389988999539065}
+  - {fileID: -8639088787757961783}
+  - {fileID: 4770101821253096583}
+  - {fileID: -1119095198432628187}
+  - {fileID: 7984522347740777942}
+  - {fileID: -5339961761279570806}
+  - {fileID: -727250429845705621}
+  - {fileID: 7953808667738463394}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 3498615135850414709}
+  - {fileID: -5018492769079277654}
   StringsBanks:
-  - {fileID: -2947210614825958157}
-  cacheTime: 638491430265709748
+  - {fileID: 8843749774561703828}
+  cacheTime: 638492473779581115
   cacheVersion: 131617
 --- !u!114 &21587895135807049
 MonoBehaviour:
@@ -455,6 +651,57 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &1830389988999539065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Vibr
+  m_EditorClassIdentifier: 
+  Path: event:/Vibr
+  Guid:
+    Data1: 1338665514
+    Data2: 1317571959
+    Data3: 1722113676
+    Data4: -824626759
+  Banks:
+  - {fileID: -5018492769079277654}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 7500
+--- !u!114 &2043055665915653939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Footsteps/Sand
+  m_EditorClassIdentifier: 
+  Name: Sand
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3000864434
+    data2: 3777697013
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &2883560624925139279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -553,6 +800,37 @@ MonoBehaviour:
   - Name: Desktop
     Value: 10635424
   Exists: 1
+--- !u!114 &4770101821253096583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Footsteps
+  m_EditorClassIdentifier: 
+  Path: event:/Footsteps
+  Guid:
+    Data1: -682784081
+    Data2: 1294100876
+    Data3: -1596864627
+    Data4: 862053569
+  Banks:
+  - {fileID: -5018492769079277654}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 5432164480276522394}
+  - {fileID: 2043055665915653939}
+  - {fileID: -4665771832032502825}
+  - {fileID: -1336033178744578359}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 5000
 --- !u!114 &5303117461478394513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -572,6 +850,30 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 826688
+  Exists: 1
+--- !u!114 &5432164480276522394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Footsteps/Wood
+  m_EditorClassIdentifier: 
+  Name: Wood
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1440708406
+    data2: 1432042003
+  Type: 0
+  IsGlobal: 0
+  Labels: []
   Exists: 1
 --- !u!114 &5436197409695890386
 MonoBehaviour:
@@ -757,6 +1059,80 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &7953808667738463394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Coin idle
+  m_EditorClassIdentifier: 
+  Path: event:/Coin idle
+  Guid:
+    Data1: 376217697
+    Data2: 1326229690
+    Data3: 270492033
+    Data4: -1676475033
+  Banks:
+  - {fileID: -1755399902657216477}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 50000
+--- !u!114 &7984522347740777942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/New Event
+  m_EditorClassIdentifier: 
+  Path: event:/New Event
+  Guid:
+    Data1: 1477804509
+    Data2: 1210479451
+    Data3: 1069331380
+    Data4: 811796263
+  Banks:
+  - {fileID: -5018492769079277654}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &8843749774561703828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: events/Fmod Events Mitte/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638492473779577113
+  FileSizes:
+  - Name: Desktop
+    Value: 1282
+  Exists: 1
 --- !u!114 &9129025485793722382
 MonoBehaviour:
   m_ObjectHideFlags: 0
