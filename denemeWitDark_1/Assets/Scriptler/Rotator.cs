@@ -3,9 +3,9 @@ using UnityEngine;
 
 public class Rotator : MonoBehaviour
 {
-    private Coroutine dönmeCoroutine; // Dönme iþlemi coroutine'unun referansý
-    private bool donuyorMu = false; // Dönme durumu
-    public float donusHizi = 360; // Dönüþ hýzý
+    private Coroutine donmeCoroutine; // Donme iþlemi coroutine'unun referansý
+    private bool donuyorMu = false; // Donme durumu
+    public float donusHizi = 360; // Donme hýzý
 
     // Update is called once per frame
     void Update()
@@ -14,15 +14,15 @@ public class Rotator : MonoBehaviour
         {
             if (!donuyorMu)
             {
-                dönmeCoroutine = StartCoroutine(DonmeIslemi());
+                donmeCoroutine = StartCoroutine(DonmeIslemi());
             }
         }
         // Input.GetKeyDown(KeyCode.H)
         if (transform.rotation.eulerAngles.z > 357)
         {
-            if (donuyorMu && dönmeCoroutine != null)
+            if (donuyorMu && donmeCoroutine != null)
             {
-                StopCoroutine(dönmeCoroutine); // Dönme iþlemi coroutine'unu durdur
+                StopCoroutine(donmeCoroutine); // Donme iþlemi coroutine'unu durdur
                 donuyorMu = false;
                 transform.rotation = Quaternion.identity;
 
@@ -41,7 +41,7 @@ public class Rotator : MonoBehaviour
             yield return null;
         }
 
-        // Döndürme iþlemi tamamlandýðýnda dönme durumunu false yaparak durduruyoruz
+        // Dondurme iþlemi tamamlandýðýnda donme durumunu false yaparak durduruyoruz
         donuyorMu = false;
     }
 }

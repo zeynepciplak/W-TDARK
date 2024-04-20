@@ -320,7 +320,7 @@ MonoBehaviour:
   Path: events/Fmod Events Mitte/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638492424881263355
+  lastModified: 638491430265664483
   FileSizes:
   - Name: Desktop
     Value: 1282
@@ -406,7 +406,7 @@ MonoBehaviour:
   - {fileID: 3498615135850414709}
   StringsBanks:
   - {fileID: -2947210614825958157}
-  cacheTime: 638492424881293565
+  cacheTime: 638491430265709748
   cacheVersion: 131617
 --- !u!114 &21587895135807049
 MonoBehaviour:
@@ -548,7 +548,7 @@ MonoBehaviour:
   Path: events/Fmod Events Mitte/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638492424881246075
+  lastModified: 638491430265644475
   FileSizes:
   - Name: Desktop
     Value: 10635424
@@ -568,7 +568,7 @@ MonoBehaviour:
   Path: events/Fmod Events Mitte/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638492424881293565
+  lastModified: 638491430265709748
   FileSizes:
   - Name: Desktop
     Value: 826688
