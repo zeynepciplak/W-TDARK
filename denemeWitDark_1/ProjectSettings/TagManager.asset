@@ -47,6 +47,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: mainmenu
+    uniqueID: 825987887
+    locked: 0
   - name: Background
     uniqueID: 2424153585
     locked: 0
