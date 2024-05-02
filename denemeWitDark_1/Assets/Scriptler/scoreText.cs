@@ -3,26 +3,29 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
+using UnityEngine;
 
 public class ScoreText : MonoBehaviour
 {
-    public Text text; // text değişkeni oluşturuldu.
+    public TextMeshProUGUI text; // TextMeshProUGUI türünde bir değişken tanımlayın.
+
     public static int coinAmount = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-         text = GetComponent<Text>(); // Bu satır gereksiz, zaten text değişkeni yukarıda tanımlı.
+        // GetComponent<TextMeshProUGUI>() metoduyla text nesnesini alın.
+        text = GetComponent<TextMeshProUGUI>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (text != null) // Check if text is assigned before accessing it
+        // Text nesnesi atanmışsa, metni güncelleyin.
+        if (text != null)
         {
             text.text = coinAmount.ToString();
         }
     }
-   
-
 }

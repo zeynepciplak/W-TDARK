@@ -8,10 +8,7 @@ using FMODUnity;
 
 public class coin : MonoBehaviour
 {
-    
-    
-
-        private bool _collected = false;
+    private bool _collected = false;
 
     //private AudioManager audioManager;
 

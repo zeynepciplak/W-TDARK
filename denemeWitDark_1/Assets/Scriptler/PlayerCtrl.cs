@@ -9,7 +9,9 @@ using UnityEngine.SceneManagement;
 public class PlayerCtrl : MonoBehaviour
 {
 
-[SerializeField] float speed;
+    public GameObject inventory;
+    bool invIsActive = false;
+    [SerializeField] float speed;
 
 
     // public static float movSpeed = 5;
@@ -46,6 +48,17 @@ public class PlayerCtrl : MonoBehaviour
             speedX = Input.GetAxisRaw("Horizontal") * movSpeed;
             speedY = Input.GetAxisRaw("Vertical") * movSpeed;
             rb.velocity = new Vector2(speedX, speedY);
+        }
+
+        if (Input.GetKeyDown(KeyCode.I) && !invIsActive)
+        {
+            inventory.SetActive(true);
+            invIsActive = true;
+        }
+        else if (Input.GetKeyDown(KeyCode.I) && invIsActive)
+        {
+            inventory.SetActive(false);
+            invIsActive = false;
         }
 
     }
