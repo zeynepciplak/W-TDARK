@@ -1,4 +1,3 @@
-/*
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,40 +15,33 @@ public class OnEnterLevel : MonoBehaviour
     public Vector3 offsetEntrance = new Vector3(1, 0.5f, 0);
     public Vector3 offsetExit = new Vector3(-1, 0.5f, 0);
 
-    private Vector3 offset;
-    private GameObject initialTarget; // Store initial entrance for later use
-    private Rigidbody2D body;
-    private bool hasUsedExit = false;
+    Vector3 offset;
+    bool hasSetOffset = false;
+    public GameObject target;
 
+    private Rigidbody2D body;
     void Awake()
     {
         body = gameObject.GetComponent<Rigidbody2D>();
     }
 
+    // Update is called once per frame
     void Start()
     {
-        initialTarget = entrance; // Remember the initial entrance position
+
         target = sceneInfo.isNextScene ? gameEntrance : exit;
         body.position = target.transform.position + offset;
     }
-
     private void Update()
     {
-        if (hasUsedExit == false)
+        if (hasSetOffset == false)
         {
-            if (sceneInfo.isNextScene) // Entering a new scene
-            {
-                offset = offsetEntrance; // Use entrance offset for new scenes
-                target = entrance; // Set entrance as the target from now on
-                hasUsedExit = false; // Reset exit flag
-            }
-            else if () // Using the exit
-            {
-                offset = offsetExit; // Use exit offset for exiting
-                target = exit; // Set exit as the target for this time only
-                hasUsedExit = true; // Set exit flag to prevent future changes
-            }
+            offset = sceneInfo.isNextScene ? offsetEntrance : offsetExit;
+            hasSetOffset = true; // Set the flag after setting offset
+        }
+        else if (hasSetOffset == true)
+        {
+            target = sceneInfo.isNextScene ? entrance : exit;
         }
     }
 }
-*/
