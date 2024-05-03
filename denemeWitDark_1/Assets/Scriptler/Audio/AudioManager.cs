@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using FMODUnity;
 using FMOD.Studio;
+using System;
 
 public class AudioManager : MonoBehaviour
 {
@@ -61,5 +62,10 @@ public class AudioManager : MonoBehaviour
     private void OnDestroy()
     {
         CleanUp();
+    }
+
+    internal StudioEventEmitter InitializeEventEmitter(object swordIdle, GameObject gameObject)
+    {
+        throw new NotImplementedException();
     }
 }
