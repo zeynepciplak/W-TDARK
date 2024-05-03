@@ -4,22 +4,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-
-
 public class PlayerCtrl : MonoBehaviour
 {
-
     public GameObject inventory;
     bool invIsActive = false;
     [SerializeField] float speed;
-
 
     // public static float movSpeed = 5;
     public static float movSpeed;
     public static float speedX, speedY;
     private Rigidbody2D rb;
-    
-    
+
+    public GameObject player;
+    public GameObject inventoryMenu;
+    public GameObject[] inventorySlots;
+    private int selectedSlotIndex = 0;
+    private bool inInventory = false;
 
     void Start()
     {
@@ -28,113 +28,53 @@ public class PlayerCtrl : MonoBehaviour
         // movSpeed = 25; 
 
         rb = GetComponent<Rigidbody2D>();
-       
+
     }
 
-    // Update is called once per frame
     void Update()
     {
-       
-        if(Input.GetKey(KeyCode.LeftShift))
+        if (!invIsActive)
         {
-            movSpeed = 10;
-            speedX = Input.GetAxisRaw("Horizontal") * movSpeed;
-            speedY = Input.GetAxisRaw("Vertical") * movSpeed;
-            rb.velocity = new Vector2(speedX, speedY);
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                movSpeed = 10;
+                speedX = Input.GetAxisRaw("Horizontal") * movSpeed;
+                speedY = Input.GetAxisRaw("Vertical") * movSpeed;
+                rb.velocity = new Vector2(speedX, speedY);
+            }
+            else
+            {
+                movSpeed = 5;
+                speedX = Input.GetAxisRaw("Horizontal") * movSpeed;
+                speedY = Input.GetAxisRaw("Vertical") * movSpeed;
+                rb.velocity = new Vector2(speedX, speedY);
+            }
+            if (Input.GetKeyDown(KeyCode.I))
+            {
+                inventory.SetActive(true);
+                invIsActive = true;
+            }
         }
         else
         {
-            movSpeed = 5;
-            speedX = Input.GetAxisRaw("Horizontal") * movSpeed;
-            speedY = Input.GetAxisRaw("Vertical") * movSpeed;
-            rb.velocity = new Vector2(speedX, speedY);
-        }
+            if (Input.GetKeyDown(KeyCode.A))
+            {
+                selectedSlotIndex = (selectedSlotIndex - 1 + inventorySlots.Length) % inventorySlots.Length;
+                Debug.Log("Seçilen envanter: " + inventorySlots[selectedSlotIndex].name);
+            }
+            else if (Input.GetKeyDown(KeyCode.D))
+            {
+                selectedSlotIndex = (selectedSlotIndex + 1) % inventorySlots.Length;
+                Debug.Log("Seçilen envanter: " + inventorySlots[selectedSlotIndex].name);
+            }
 
-        if (Input.GetKeyDown(KeyCode.I) && !invIsActive)
-        {
-            inventory.SetActive(true);
-            invIsActive = true;
+            if (Input.GetKeyDown(KeyCode.I))
+            {
+                inventory.SetActive(false);
+                invIsActive = false;
+            }
         }
-        else if (Input.GetKeyDown(KeyCode.I) && invIsActive)
-        {
-            inventory.SetActive(false);
-            invIsActive = false;
-        }
-
     }
-
-
 }
-
-
-
-
-
-
-
-        /*
-        if (elapsedTime >= restartTime)
-        {
-            RestartGame();
-        }
-        */
-
-        // Karakter yÃ¼rÃ¼rken wotf sesi Ã§al
-        
-        /*
-        if (rb.velocity.magnitude > 0 && !isWalkingOnBush && !isWalkingOnStone)
-        {
-            audioManager.PlayAudio(audioManager.wotgAS);
-        }
-       
-    }
-        */
-
-   /* void OnTriggerEnter2D(Collider2D collision)
-    {
-        // ÃalÄ±lardan geÃ§erken wot sesi Ã§al
-        if (collision.CompareTag("Bush"))
-        {
-            isWalkingOnBush = true;
-            audioManager.PlayAudio(audioManager.wotfAS);
-        }
-
-        // TaÅÄ±n Ã¼stÃ¼nden geÃ§erken 3. sesi Ã§al
-        if (collision.CompareTag("Stone"))
-        {
-            isWalkingOnStone = true;
-            audioManager.PlayAudio(audioManager.wotlAS);
-        }
-    }
-
-    void OnTriggerExit2D(Collider2D collision)
-    {
-        // ÃalÄ±lardan veya taÅÄ±n Ã¼stÃ¼nden Ã§Ä±kÄ±nca sesi durdur
-        if (collision.CompareTag("Bush"))
-        {
-            isWalkingOnBush = false;
-        }
-
-        if (collision.CompareTag("Stone"))
-        {
-            isWalkingOnStone = false;
-        }
-    }
-
-
-
-    /*
-    void RestartGame()
-    {
-#if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
-#else
-    Application.Quit();
-    System.Diagnostics.Process.Start(Application.dataPath.Replace("_Data", "") + ".exe");
-#endif
-    }
-    */
-
-
 
 
