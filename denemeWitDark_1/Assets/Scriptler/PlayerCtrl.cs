@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -21,6 +22,10 @@ public class PlayerCtrl : MonoBehaviour
     private int selectedSlotIndex = 0;
     private bool inInventory = false;
 
+    public bool isLoaded2 = false;
+
+    
+
     void Start()
     {
         movSpeed = 5;
@@ -28,11 +33,34 @@ public class PlayerCtrl : MonoBehaviour
         // movSpeed = 25; 
 
         rb = GetComponent<Rigidbody2D>();
+        
 
     }
 
     void Update()
     {
+        /*
+        GameObject player = GameObject.Find("Player");
+        Scene openWorldScene = SceneManager.GetSceneByName("OpenWorld");
+        Scene sampleScene = SceneManager.GetSceneByName("SampleScene 3");
+
+        if (sampleScene.isLoaded && isLoaded2 == false)
+        {
+            player.transform.position = new Vector3(421.34f, -17.48f, 0);
+        }
+        else if (openWorldScene.isLoaded )
+        {
+            isLoaded2 = true;
+            player.transform.position = new Vector3(418, -82, 0);
+            
+        }
+        else if (sampleScene.isLoaded && isLoaded2 == true)
+        {
+            player.transform.position = new Vector3(0, 0, 0);
+            
+        }
+        */
+
         if (!invIsActive)
         {
             if (Input.GetKey(KeyCode.LeftShift))
