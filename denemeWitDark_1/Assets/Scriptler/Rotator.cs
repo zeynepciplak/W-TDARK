@@ -3,11 +3,11 @@ using UnityEngine;
 
 public class Rotator : MonoBehaviour
 {
-    public float rotateSpeed = 180f; // Dönme hýzý (derece/saniye)
+    public float rotateSpeed = 180f; // Donme hizi (derece/saniye)
 
     void Update()
     {
-        // Her saniye, transform.Rotate() fonksiyonu ile nesneyi Z ekseni etrafýnda döndürürüz.
+        // Her saniye, transform.Rotate() fonksiyonu ile nesneyi Z ekseni etrafinda dondururuz.
         transform.Rotate(Vector3.forward * -rotateSpeed * Time.deltaTime);
     }
 }
@@ -19,9 +19,9 @@ using System.Collections;
 using UnityEngine;
 public class Rotator : MonoBehaviour
 {
-    private Coroutine dönmeCoroutine; // Dönme iþlemi coroutine'unun referansý
-    private bool donuyorMu = false; // Dönme durumu
-    public float donusHizi = 360; // Dönüþ hýzý
+    private Coroutine donmeCoroutine; // Donme islemi coroutine'unun referansi
+    private bool donuyorMu = false; // Donme durumu
+    public float donusHizi = 360; // Donme hizi
 
     public float sonGBasmaZamani = 0.0f;
 
@@ -29,10 +29,10 @@ public class Rotator : MonoBehaviour
 
     void Start()
     {
-        // Iþýk nesnesini etiketine göre bul ve referansý kaydet
+        // Isik nesnesini etiketine gore bul ve referansi kaydet
         isikObjesi = GameObject.FindWithTag("PlayerLight");
 
-        // Baþlangýçta ýþýðý devre dýþý býrak
+        // Baslangicta isigi devre disi birak
         isikObjesi.SetActive(false);
 
         sonGBasmaZamani = -2f;
@@ -49,7 +49,7 @@ public class Rotator : MonoBehaviour
 
             if (!donuyorMu)
             {
-                dönmeCoroutine = StartCoroutine(DonmeIslemi());
+                donmeCoroutine = StartCoroutine(DonmeIslemi());
                 donuyorMu = true;
             }
             sonGBasmaZamani = Time.time;
@@ -57,9 +57,9 @@ public class Rotator : MonoBehaviour
 
         // Input.GetKeyDown(KeyCode.H)
         //if (transform.rotation.eulerAngles.z > 359)
-        if (donuyorMu && dönmeCoroutine != null)
+        if (donuyorMu && donmeCoroutine != null)
         {
-            dönmeCoroutine = StartCoroutine(GeciktirmeliDurdurma(dönmeCoroutine));
+            donmeCoroutine = StartCoroutine(GeciktirmeliDurdurma(donmeCoroutine));
         }
     }
     IEnumerator DonmeIslemi()
@@ -77,18 +77,18 @@ public class Rotator : MonoBehaviour
         }
 
         //yield return new WaitForSeconds(1f);
-        // Döndürme iþlemi tamamlandýðýnda dönme durumunu false yaparak durduruyoruz
+        // Dondurme islemi tamamlandiginda donme durumunu false yaparak durduruyoruz
 
 
         donuyorMu = false;
     }
     IEnumerator GeciktirmeliDurdurma(Coroutine coroutine)
     {
-        if (donuyorMu && dönmeCoroutine != null)
+        if (donuyorMu && donmeCoroutine != null)
         {
             yield return new WaitForSeconds(1f); // 1 saniye bekle
             isikObjesi.SetActive(false);
-            // Dönme iþlemi coroutine'unu durdur
+            // Donme islemi coroutine'unu durdur
             StopCoroutine(coroutine);
 
             donuyorMu = false;
