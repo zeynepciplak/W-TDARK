@@ -13,6 +13,7 @@ TagManager:
   - cali
   - kum
   - water
+  - Gardiyan
   layers:
   - Default
   - TransparentFX
@@ -86,6 +87,9 @@ TagManager:
   - name: Radar_deneme
     uniqueID: 882450181
     locked: 0
+  - name: Gardiyan
+    uniqueID: 3055331233
+    locked: 1
   - name: Player
     uniqueID: 1587600613
     locked: 0
