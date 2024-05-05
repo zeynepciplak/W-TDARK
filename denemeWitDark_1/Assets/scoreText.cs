@@ -6,23 +6,38 @@ using UnityEngine.UI;
 
 public class ScoreText : MonoBehaviour
 {
-    public TextMeshProUGUI text; // text değişkeni oluşturuldu.
+    public TextMeshProUGUI text;
     public static int coinAmount = 0;
+    public int i = 0;
+    GameObject player;
 
-    // Start is called before the first frame update
+
     void Start()
     {
-        text = GetComponent<TextMeshProUGUI>(); // Bu satır gereksiz, zaten text değişkeni yukarıda tanımlı.
+        player = GameObject.FindGameObjectWithTag("Player");
+        text = GetComponent<TextMeshProUGUI>();
+
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (text != null) // Check if text is assigned before accessing it
+        i = player.GetComponent<PlayerCtrl>().selectedSlotIndex;
+        if (text != null)
         {
             text.text = coinAmount.ToString();
+
+            if (Input.GetKeyDown(KeyCode.Return))
+            {
+                if (i == 0)
+                {
+                    if (coinAmount > 0)
+                    {
+                        coinAmount--;
+                        Debug.Log("\nPara envanteri azaltıldı. Yeni envanter sayısı: " + coinAmount);
+
+                    }
+                }
+            }
         }
     }
-
-
 }
