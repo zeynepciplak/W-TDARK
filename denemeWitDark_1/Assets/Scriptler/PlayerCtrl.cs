@@ -79,6 +79,8 @@ public class PlayerCtrl : MonoBehaviour
             }
             if (Input.GetKeyDown(KeyCode.I))
             {
+                rb.velocity = Vector2.zero;
+
                 inventory.SetActive(true);
                 invIsActive = true;
             }
@@ -100,6 +102,7 @@ public class PlayerCtrl : MonoBehaviour
             {
                 inventory.SetActive(false);
                 invIsActive = false;
+                rb.velocity = new Vector2(speedX, speedY); // Hareketi yeniden başlat
             }
         }
     }

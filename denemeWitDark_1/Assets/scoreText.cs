@@ -6,13 +6,13 @@ using UnityEngine.UI;
 
 public class ScoreText : MonoBehaviour
 {
-    public Text text; // text değişkeni oluşturuldu.
+    public TextMeshProUGUI text; // text değişkeni oluşturuldu.
     public static int coinAmount = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-        text = GetComponent<Text>(); // Bu satır gereksiz, zaten text değişkeni yukarıda tanımlı.
+        text = GetComponent<TextMeshProUGUI>(); // Bu satır gereksiz, zaten text değişkeni yukarıda tanımlı.
     }
 
     // Update is called once per frame
