@@ -11,6 +11,8 @@ public class swordText : MonoBehaviour
     public int i = 0;
     GameObject player;
 
+    // :sunglasses:
+    public bool swordAktif = false;
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -33,6 +35,7 @@ public class swordText : MonoBehaviour
                     {
                         swordAmount--;
                         Debug.Log("\nKılıç envanteri azaltıldı. Yeni envanter sayısı: " + swordAmount);
+                        swordAktif = true;
                     }
                 }
             }
