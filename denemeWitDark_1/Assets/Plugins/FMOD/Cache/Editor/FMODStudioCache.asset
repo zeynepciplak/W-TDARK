@@ -665,10 +665,10 @@ MonoBehaviour:
   Path: events/Fmod Events Mitte/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638491430265644475
+  lastModified: 638506129704304971
   FileSizes:
   - Name: Desktop
-    Value: 10635424
+    Value: 10634400
   Exists: 1
 --- !u!114 &-2507677279733788985
 MonoBehaviour:
@@ -765,33 +765,6 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &-1522476733211732538
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Vibr
-  m_EditorClassIdentifier: 
-  Path: event:/Vibr
-  Guid:
-    Data1: 1338665514
-    Data2: 1317571959
-    Data3: 1722113676
-    Data4: -824626759
-  Banks:
-  - {fileID: -2823328840702692608}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 7500
 --- !u!114 &-1336033178744578359
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -935,7 +908,6 @@ MonoBehaviour:
   - {fileID: -2823328840702692608}
   - {fileID: 4289878728430522434}
   EditorEvents:
-  - {fileID: -1522476733211732538}
   - {fileID: 7390119818839666981}
   - {fileID: 6289784608158510174}
   - {fileID: -6473017107637930028}
@@ -943,12 +915,13 @@ MonoBehaviour:
   - {fileID: 2430573959475562107}
   - {fileID: -6175489073902744898}
   - {fileID: 6693961015359880731}
+  - {fileID: 495794207559638300}
   EditorParameters: []
   MasterBanks:
   - {fileID: -2823328840702692608}
   StringsBanks:
   - {fileID: 7885368521769768355}
-  cacheTime: 638491430265709748
+  cacheTime: 638506129704324742
   cacheVersion: 131617
 --- !u!114 &6035698564269841
 MonoBehaviour:
@@ -1078,6 +1051,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 7500
+--- !u!114 &495794207559638300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Guardian/hit
+  m_EditorClassIdentifier: 
+  Path: event:/Guardian/hit
+  Guid:
+    Data1: 442860627
+    Data2: 1091526996
+    Data3: -1137655405
+    Data4: -722797448
+  Banks:
+  - {fileID: 4289878728430522434}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 5463
 --- !u!114 &1618706518363223307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1170,19 +1170,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Vibration
   Guid:
-    Data1: 1666464486
-    Data2: 1118259082
-    Data3: -881690705
-    Data4: -598285018
+    Data1: 1338665514
+    Data2: 1317571959
+    Data3: 1722113676
+    Data4: -824626759
   Banks:
   - {fileID: -2823328840702692608}
-  IsStream: 0
+  IsStream: 1
   Is3D: 1
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 7500
 --- !u!114 &2883560624925139279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1320,10 +1320,10 @@ MonoBehaviour:
   Path: events/Fmod Events Mitte/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638491430265709748
+  lastModified: 638506126125434936
   FileSizes:
   - Name: Desktop
-    Value: 826688
+    Value: 872608
   Exists: 1
 --- !u!114 &4539549842801730142
 MonoBehaviour:
@@ -1806,10 +1806,10 @@ MonoBehaviour:
   Path: events/Fmod Events Mitte/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638491430265664483
+  lastModified: 638506129704324742
   FileSizes:
   - Name: Desktop
-    Value: 1282
+    Value: 1284
   Exists: 1
 --- !u!114 &7953808667738463394
 MonoBehaviour:
