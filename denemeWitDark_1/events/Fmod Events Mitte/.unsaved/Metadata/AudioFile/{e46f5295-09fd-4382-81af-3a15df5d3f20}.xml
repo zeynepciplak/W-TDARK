@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{e46f5295-09fd-4382-81af-3a15df5d3f20}">
+		<property name="assetPath">
+			<value>Weather/nature-sounds-riverside-forest-birds-jungle-crickets-water-hq2496-190668 2.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>72</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{d1dfd176-3792-46a2-9e26-6cb0f7ba0814}</destination>
+		</relationship>
+	</object>
+</objects>

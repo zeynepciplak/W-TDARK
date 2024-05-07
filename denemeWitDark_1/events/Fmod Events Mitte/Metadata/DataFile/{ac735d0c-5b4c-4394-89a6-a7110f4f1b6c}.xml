@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="DataFile" id="{ac735d0c-5b4c-4394-89a6-a7110f4f1b6c}">
+		<property name="assetPath">
+			<value>Weather/nature-sounds-riverside-forest-birds-jungle-crickets-water-hq2496-190668 2.mp3.meta</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{d1dfd176-3792-46a2-9e26-6cb0f7ba0814}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="DataFile" id="{693e4b76-6a23-4080-8b72-6bf60667a8a8}">
+		<property name="assetPath">
+			<value>Weather/wind-in-trees-117477.mp3.meta</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{d1dfd176-3792-46a2-9e26-6cb0f7ba0814}</destination>
+		</relationship>
+	</object>
+</objects>
