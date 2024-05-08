@@ -18,7 +18,7 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Enemy
   - Water
   - UI
   - 
@@ -113,4 +113,7 @@ TagManager:
     locked: 0
   - name: "tutorialAlan\u0131"
     uniqueID: 2640903521
+    locked: 0
+  - name: Enemy
+    uniqueID: 767264175
     locked: 0
