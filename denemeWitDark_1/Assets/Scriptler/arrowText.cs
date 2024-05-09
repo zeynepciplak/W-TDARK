@@ -9,7 +9,7 @@ public class arrowText : MonoBehaviour
     public TextMeshProUGUI text;
     public static int arrowAmount = 0;
     public int i = 0;
-    GameObject player;
+    public GameObject player;
 
     public bool arrowAktif = false;
     void Start()
@@ -28,13 +28,25 @@ public class arrowText : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.Return))
             {
-                if (i == 1)
+                if (i == 2)
                 {
                     if (arrowAmount > 0)
                     {
                         arrowAmount--;
                         Debug.Log("\nOk envanteri azaltýldý. Yeni envanter sayýsý: " + arrowAmount);
                         arrowAktif = true;
+                    }
+                }
+            }
+            if (Input.GetKeyDown(KeyCode.O))
+            {
+                if (i == 2)
+                {
+                    if (arrowAmount > 0)
+                    {
+                        Debug.Log("Ok alýndý.");
+                        arrowAktif = true;
+
                     }
                 }
             }

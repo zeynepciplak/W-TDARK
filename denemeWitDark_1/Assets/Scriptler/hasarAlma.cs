@@ -18,10 +18,11 @@ public class hasarAlma : MonoBehaviour
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
         currentHealth = maxHealth;
 
+        /*
         // :sunglasses:
         bowSecili = player.GetComponent<bowText>().bowAktif;
         arrowSecili = player.GetComponent<arrowText>().arrowAktif;
-
+        */
     }
 
     private void Update()

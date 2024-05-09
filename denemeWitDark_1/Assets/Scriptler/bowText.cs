@@ -29,7 +29,7 @@ public class bowText : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.Return))
             {
-                if (i == 1)
+                if (i == 0)
                 {
                     if (bowAmount > 0)
                     {
@@ -38,6 +38,19 @@ public class bowText : MonoBehaviour
                         bowAktif = true;
                     }
                 }
+            }
+            if (Input.GetKeyDown(KeyCode.O))
+            {
+                if (i == 0)
+                {
+                    if (bowAmount > 0)
+                    {
+                        Debug.Log("Yay alýndý.");
+                        bowAktif = true;
+
+                    }
+                }
+
             }
         }
     }

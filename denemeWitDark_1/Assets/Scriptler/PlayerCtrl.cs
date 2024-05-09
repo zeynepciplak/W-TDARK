@@ -20,14 +20,20 @@ public class PlayerCtrl : MonoBehaviour
     public GameObject[] inventorySlots;
     public int selectedSlotIndex = 0;
 
+    public int okAdedi = 0;
+    public int kilicAdedi = 0;
+    public int yayAdedi = 0;
     void Start()
     {
         movSpeed = 5;
         rb = GetComponent<Rigidbody2D>();
+        inventory.SetActive(false);
     }
 
     void Update()
     {
+        
+
         if (!invIsActive)
         {
             if (Input.GetKey(KeyCode.LeftShift))
@@ -56,13 +62,14 @@ public class PlayerCtrl : MonoBehaviour
             {
                 selectedSlotIndex = (selectedSlotIndex - 1 + inventorySlots.Length) % inventorySlots.Length;
                 Debug.Log("Seçilen envanter: " + inventorySlots[selectedSlotIndex].name);
-
+                
 
             }
             else if (Input.GetKeyDown(KeyCode.D))
             {
                 selectedSlotIndex = (selectedSlotIndex + 1) % inventorySlots.Length;
                 Debug.Log("Seçilen envanter: " + inventorySlots[selectedSlotIndex].name);
+                
             }
             
 

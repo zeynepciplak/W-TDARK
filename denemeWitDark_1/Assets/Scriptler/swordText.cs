@@ -25,8 +25,6 @@ public class swordText : MonoBehaviour
         if (text != null)
         {
             text.text = swordAmount.ToString();
-
-
             if (Input.GetKeyDown(KeyCode.Return))
             {
                 if (i == 1)
@@ -41,8 +39,16 @@ public class swordText : MonoBehaviour
             }
             if(Input.GetKeyDown(KeyCode.O))
             {
-                Debug.Log("Kılıç alındı.");
-                swordAktif = true;
+                if (i == 1)
+                {
+                    if (swordAmount > 0)
+                    {
+                        Debug.Log("Kılıç alındı.");
+                        swordAktif = true;
+
+                    }
+                }
+                
 
             }
         }
