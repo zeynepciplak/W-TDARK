@@ -21,20 +21,7 @@ public class Radar : MonoBehaviour
 
         if (collision.tag == "PlayerLight")
         {
-            
-            /*
-            PlayerCtrl.movSpeed = 0;
-            PlayerCtrl.speedX = 0;
-            PlayerCtrl.speedY = 0;
-            */
-
-            /*
-            Debug.Log("Deneme Tahtasi");
-            Debug.Log(can);
-            */
-            
             spriteRenderer.sprite = redSmoothCross;
-
 
             //int metre = 19;
             float distance = Vector3.Distance(transform.position, playerTransform.position);

@@ -15,9 +15,10 @@ public class TutorialCutscene : MonoBehaviour
         if (collision.tag == "Player" && !hasEntered)
         {
             hasEntered = true;
-            PlayerCtrl.movSpeed = 0;
-            PlayerCtrl.speedX = 0;
-            PlayerCtrl.speedY = 0;
+            PlayerMovement.movSpeed = 0;
+            PlayerMovement.speedX = 0;
+            PlayerMovement.speedY = 0;
+            PlayerMovement.rb.velocity = Vector2.zero;
 
             isCutsceneOn = true;
             Debug.Log("Hoþ Geldin sevgili oyuncu! Oyunda hareket etmek için 'WASD' tuþlarýný kullanmalýsýn. Ne yazýk ki yön tuþlarý envanter menüsü için kullanýlýyor.\n" +
@@ -31,7 +32,6 @@ public class TutorialCutscene : MonoBehaviour
 
     void StopCutscene()
     {
-        PlayerCtrl.movSpeed = 5;
         isCutsceneOn = false;
         Destroy(gameObject);
 

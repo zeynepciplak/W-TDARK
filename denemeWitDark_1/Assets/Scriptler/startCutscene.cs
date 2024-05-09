@@ -13,18 +13,19 @@ public class startCutscene : MonoBehaviour{
     void OnTriggerEnter2D(Collider2D collision){
         if (collision.tag == "Player")
         {
-            PlayerCtrl.movSpeed = 0;
-            PlayerCtrl.speedX = 0;
-            PlayerCtrl.speedY = 0;
-
             isCutsceneOn = true;
             canAnim.SetBool("cutscene1", true);
+            PlayerMovement.movSpeed = 0;
+            PlayerMovement.speedX = 0;
+            PlayerMovement.speedY = 0;
+            PlayerMovement.rb.velocity = Vector2.zero;
             Invoke(nameof(StopCutscene), 5f);
+
+            
         }  
     }
     void StopCutscene()
     {
-        PlayerCtrl.movSpeed = 5;
         isCutsceneOn = false;
         canAnim.SetBool("cutscene1", false);
 

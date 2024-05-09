@@ -15,9 +15,11 @@ public class tutorialCutscene2 : MonoBehaviour
             if (hepsiYok())
             {
                 hasEntered = true;
-                PlayerCtrl.movSpeed = 0;
-                PlayerCtrl.speedX = 0;
-                PlayerCtrl.speedY = 0;
+                PlayerMovement.movSpeed = 0;
+                PlayerMovement.speedX = 0;
+                PlayerMovement.speedY = 0;
+                PlayerMovement.rb.velocity = Vector2.zero;
+
                 isCutsceneOn = true;
                 Debug.Log("Hedef objelerin hepsi yok edildi!\n" +
                           "Tekrar karþýlaþana kadar görüþürüz yolcu");
@@ -42,7 +44,7 @@ public class tutorialCutscene2 : MonoBehaviour
 
     void StopCutscene()
     {
-        PlayerCtrl.movSpeed = 5;
+        PlayerMovement.movSpeed = 5;
         isCutsceneOn = false;
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         if (player != null)
