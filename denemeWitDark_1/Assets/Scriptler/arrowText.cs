@@ -34,22 +34,24 @@ public class arrowText : MonoBehaviour
                     {
                         arrowAmount--;
                         Debug.Log("\nOk envanteri azaltýldý. Yeni envanter sayýsý: " + arrowAmount);
-                        arrowAktif = true;
+                        
                     }
                 }
             }
+            
             if (Input.GetKeyDown(KeyCode.O))
             {
                 if (i == 2)
                 {
                     if (arrowAmount > 0)
                     {
-                        Debug.Log("Ok alýndý.");
+                        Debug.Log("Ok alýndý");
                         arrowAktif = true;
 
                     }
                 }
             }
+            
         }
     }
 }

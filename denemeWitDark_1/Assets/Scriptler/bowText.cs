@@ -12,7 +12,7 @@ public class bowText : MonoBehaviour
     GameObject player;
 
     // :sunglasses:
-    public bool bowAktif = false;
+    public static bool bowAktif = false;
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -39,19 +39,21 @@ public class bowText : MonoBehaviour
                     }
                 }
             }
+            
             if (Input.GetKeyDown(KeyCode.O))
             {
                 if (i == 0)
                 {
                     if (bowAmount > 0)
                     {
-                        Debug.Log("Yay alýndý.");
+                        Debug.Log("Yay alýndý");
                         bowAktif = true;
 
                     }
                 }
 
             }
+            
         }
     }
 }

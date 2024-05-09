@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3593404886717950499}
   - component: {fileID: 8698862773253015102}
   - component: {fileID: 2528881850400034643}
+  - component: {fileID: 1234600306031916399}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -111,9 +112,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   selectedSlotIndex: 0
-  okAdedi: 0
-  kilicAdedi: 0
-  yayAdedi: 0
 --- !u!114 &4636189367030976635
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,7 +137,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35f6c4b11f44d1e468518da6d865d2ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
 --- !u!50 &8698862773253015102
 Rigidbody2D:
   serializedVersion: 4
@@ -212,6 +209,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1234600306031916399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1416427999652417436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 603688f352219514d8f8565fa8bd47eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4396625442646573132
 GameObject:
   m_ObjectHideFlags: 0

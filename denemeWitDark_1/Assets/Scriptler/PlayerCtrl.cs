@@ -19,6 +19,9 @@ public class PlayerCtrl : MonoBehaviour
 
     void Update()
     {
+
+
+
         if (!invIsActive)
         {
             if (Input.GetKeyDown(KeyCode.I))
@@ -38,24 +41,23 @@ public class PlayerCtrl : MonoBehaviour
             {
                 selectedSlotIndex = (selectedSlotIndex - 1 + inventorySlots.Length) % inventorySlots.Length;
                 Debug.Log("Seçilen envanter: " + inventorySlots[selectedSlotIndex].name);
-
-
+                
             }
             else if (Input.GetKeyDown(KeyCode.D))
             {
                 selectedSlotIndex = (selectedSlotIndex + 1) % inventorySlots.Length;
                 Debug.Log("Seçilen envanter: " + inventorySlots[selectedSlotIndex].name);
-
             }
 
-            if (Input.GetKeyDown(KeyCode.I))
-            {
-                inventory.SetActive(false);
-                invIsActive = false;
-            }
+                if (Input.GetKeyDown(KeyCode.I))
+                {
+                    inventory.SetActive(false);
+                    invIsActive = false;
+                }
 
+            }
         }
-    }
+   
 }
 
 
