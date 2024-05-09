@@ -11,7 +11,7 @@ public class arrowText : MonoBehaviour
     public int i = 0;
     public GameObject player;
 
-    public bool arrowAktif = false;
+    public static bool arrowAktif = false;
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -47,6 +47,9 @@ public class arrowText : MonoBehaviour
                     {
                         Debug.Log("Ok alýndý");
                         arrowAktif = true;
+                        bowText.bowAktif = false;
+                        swordText.swordAktif = false;
+
 
                     }
                 }

@@ -12,7 +12,7 @@ public class swordText : MonoBehaviour
     GameObject player;
 
     // :sunglasses:
-    public bool swordAktif = false;
+    public static bool swordAktif = false;
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -46,6 +46,8 @@ public class swordText : MonoBehaviour
                     {
                         Debug.Log("Kılıç alındı");
                         swordAktif = true;
+                        bowText.bowAktif = false;
+                        arrowText.arrowAktif = false;
 
                     }
                 }

@@ -35,7 +35,7 @@ public class bowText : MonoBehaviour
                     {
                         bowAmount--;
                         Debug.Log("\nYay envanteri azaltýldý. Yeni envanter sayýsý: " + bowAmount);
-                        bowAktif = true;
+                        
                     }
                 }
             }
@@ -48,6 +48,8 @@ public class bowText : MonoBehaviour
                     {
                         Debug.Log("Yay alýndý");
                         bowAktif = true;
+                        arrowText.arrowAktif = false;
+                        swordText.swordAktif = false;
 
                     }
                 }
