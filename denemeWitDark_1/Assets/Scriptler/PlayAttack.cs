@@ -16,6 +16,7 @@ public class PlayAttack : MonoBehaviour
     public bool bowSecili = false;
     public bool arrowSecili = false;
     public bool swordSecili = false;
+
     void Start()
     {
         enemyCurrentHP = enemyMaxHP;
@@ -23,15 +24,16 @@ public class PlayAttack : MonoBehaviour
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.F))
         {
-            if(bowText.bowAktif == true && swordText.swordAktif == false && arrowText.arrowAktif == false) {
+            if(bowText.bowAktif == true && swordText.swordAktif == false && arrowText.arrowAktif == false)
+            {
                 damageAmount = 15;
                 TakeDamage();
             }
+
             else if (swordText.swordAktif == true && bowText.bowAktif == false && arrowText.arrowAktif == false)
             {
                 damageAmount = 30;
