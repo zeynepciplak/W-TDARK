@@ -6,6 +6,7 @@ public class PlayerCtrl : MonoBehaviour
     bool invIsActive = false;
     // Bu alttaki ne ise yarıyor bilmiyorum -Ömer
     [SerializeField] float speed;
+    public static int swordAmount = 0;
 
     public GameObject player;
     public GameObject inventoryMenu;
@@ -19,9 +20,6 @@ public class PlayerCtrl : MonoBehaviour
 
     void Update()
     {
-
-
-
         if (!invIsActive)
         {
             if (Input.GetKeyDown(KeyCode.I))
@@ -41,7 +39,6 @@ public class PlayerCtrl : MonoBehaviour
             {
                 selectedSlotIndex = (selectedSlotIndex - 1 + inventorySlots.Length) % inventorySlots.Length;
                 Debug.Log("Seçilen envanter: " + inventorySlots[selectedSlotIndex].name);
-                
             }
             else if (Input.GetKeyDown(KeyCode.D))
             {
@@ -49,15 +46,24 @@ public class PlayerCtrl : MonoBehaviour
                 Debug.Log("Seçilen envanter: " + inventorySlots[selectedSlotIndex].name);
             }
 
-                if (Input.GetKeyDown(KeyCode.I))
-                {
-                    inventory.SetActive(false);
-                    invIsActive = false;
-                }
-
+            if (Input.GetKeyDown(KeyCode.I))
+            {
+                inventory.SetActive(false);
+                invIsActive = false;
             }
         }
-   
+
+        if (swordAmount < 0)
+        {
+            Debug.LogWarning("SwordAmount 0'dan küçük! Bu sorunu çözmelisiniz.");
+            return;
+        }
+
+        // swordAmount 0 veya daha büyükse, swordAmount değerini ekrana yazdır
+        text.text = swordAmount.ToString();
+    }
+
+
 }
 
 
