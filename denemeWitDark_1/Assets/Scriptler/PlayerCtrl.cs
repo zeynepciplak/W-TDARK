@@ -52,15 +52,6 @@ public class PlayerCtrl : MonoBehaviour
                 invIsActive = false;
             }
         }
-
-        if (swordAmount < 0)
-        {
-            Debug.LogWarning("SwordAmount 0'dan küçük! Bu sorunu çözmelisiniz.");
-            return;
-        }
-
-        // swordAmount 0 veya daha büyükse, swordAmount değerini ekrana yazdır
-        text.text = swordAmount.ToString();
     }
 
 
