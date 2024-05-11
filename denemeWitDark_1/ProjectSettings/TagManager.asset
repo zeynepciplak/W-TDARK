@@ -15,6 +15,12 @@ TagManager:
   - water
   - Gardiyan
   - Enemy
+  - Dirt
+  - Wood
+  - Sand
+  - Water
+  - MainGround
+  - Grass
   layers:
   - Default
   - TransparentFX

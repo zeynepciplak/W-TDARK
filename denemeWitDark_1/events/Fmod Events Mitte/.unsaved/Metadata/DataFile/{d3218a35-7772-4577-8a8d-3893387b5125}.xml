@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.02.00">
-	<object class="DataFile" id="{d3218a35-7772-4577-8a8d-3893387b5125}">
-		<property name="assetPath" />
-		<relationship name="masterAssetFolder">
-			<destination>{d1dfd176-3792-46a2-9e26-6cb0f7ba0814}</destination>
-		</relationship>
-	</object>
-</objects>

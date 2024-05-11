@@ -93,6 +93,9 @@
 	</object>
 	<object class="MixerBusPanner" id="{e85803b0-1ddf-43d1-8c4a-9f57285f764e}" />
 	<object class="SingleSound" id="{daff863a-cb3d-46b9-b814-2547d212b3e7}">
+		<property name="color">
+			<value>Red</value>
+		</property>
 		<property name="start">
 			<value>1.7318367346938777</value>
 		</property>
@@ -107,6 +110,9 @@
 		</relationship>
 	</object>
 	<object class="SingleSound" id="{93a8df2b-d6c7-4bf3-b067-c3cb980e53d2}">
+		<property name="color">
+			<value>Red</value>
+		</property>
 		<property name="start">
 			<value>3.7318367346938777</value>
 		</property>
@@ -121,6 +127,9 @@
 		</relationship>
 	</object>
 	<object class="SingleSound" id="{84f8c7fa-4d1d-4648-9f91-1fb93da16723}">
+		<property name="color">
+			<value>Red</value>
+		</property>
 		<property name="length">
 			<value>1.7318367346938777</value>
 		</property>

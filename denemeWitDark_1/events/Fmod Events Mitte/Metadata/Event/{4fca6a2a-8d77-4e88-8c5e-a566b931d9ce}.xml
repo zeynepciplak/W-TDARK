@@ -120,6 +120,9 @@
 	</object>
 	<object class="MixerBusPanner" id="{9ab17f97-f696-4115-a9da-dea557eafbc6}" />
 	<object class="SingleSound" id="{2261f182-0745-46bd-af62-6019bba3f499}">
+		<property name="color">
+			<value>Magenta Light 1</value>
+		</property>
 		<property name="isAsync">
 			<value>true</value>
 		</property>
@@ -151,6 +154,9 @@
 		</relationship>
 	</object>
 	<object class="SingleSound" id="{a92b1787-5c1f-4835-b1bb-e7076672216c}">
+		<property name="color">
+			<value>Purple Light 2</value>
+		</property>
 		<property name="isAsync">
 			<value>true</value>
 		</property>
@@ -162,6 +168,9 @@
 		</relationship>
 	</object>
 	<object class="SingleSound" id="{94b280f3-5b4f-4a18-9284-a674ff65b3d3}">
+		<property name="color">
+			<value>Blue Light 2</value>
+		</property>
 		<property name="isAsync">
 			<value>true</value>
 		</property>
@@ -176,6 +185,9 @@
 		</relationship>
 	</object>
 	<object class="SingleSound" id="{bee6073a-2e93-4052-874e-b5bb223824f3}">
+		<property name="color">
+			<value>Cyan</value>
+		</property>
 		<property name="isAsync">
 			<value>true</value>
 		</property>
@@ -210,6 +222,9 @@
 		</relationship>
 	</object>
 	<object class="SingleSound" id="{373a2725-eee3-470a-becc-2c01d05bd5ac}">
+		<property name="color">
+			<value>Yellow</value>
+		</property>
 		<property name="isAsync">
 			<value>true</value>
 		</property>
