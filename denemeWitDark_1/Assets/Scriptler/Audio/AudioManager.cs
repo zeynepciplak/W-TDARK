@@ -76,4 +76,15 @@ public class AudioManager : MonoBehaviour
     {
         throw new NotImplementedException();
     }
+
+    // Ses olayını durdurmak için metot
+    public void StopEvent(GameObject gameObject)
+    {
+        // Eğer bu nesne bir StudioEventEmitter bileşeni içeriyorsa, onun oynatılan sesini durdur
+        StudioEventEmitter emitter = gameObject.GetComponent<StudioEventEmitter>();
+        if (emitter != null)
+        {
+            emitter.Stop();
+        }
+    }
 }
