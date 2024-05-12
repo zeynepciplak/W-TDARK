@@ -160,7 +160,7 @@
 	</object>
 	<object class="EventMixerMaster" id="{52980e10-5009-43ae-8990-1446982e0ed7}">
 		<property name="volume">
-			<value>10</value>
+			<value>-10</value>
 		</property>
 		<relationship name="modulators">
 			<destination>{4c161430-d23d-414b-8e09-4c88883664cc}</destination>
@@ -387,7 +387,17 @@
 			<destination>{9df0598f-bea9-41cf-8200-f3ee4b845165}</destination>
 		</relationship>
 	</object>
-	<object class="MixerBusPanner" id="{415de61a-dbe2-4644-8917-85bc1b54e845}" />
+	<object class="MixerBusPanner" id="{415de61a-dbe2-4644-8917-85bc1b54e845}">
+		<property name="surroundPanDirection">
+			<value>-62.2414551</value>
+		</property>
+		<property name="surroundPanExtent">
+			<value>156.074615</value>
+		</property>
+		<property name="surroundLFELevel">
+			<value>5</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{1431aab3-afff-4025-90b6-7e7d252c75e1}" />
 	<object class="SingleSound" id="{6d8a61e7-f587-4169-b1c2-c86bd6e62406}">
 		<relationship name="audioFile">
@@ -624,7 +634,7 @@
 			<value>1</value>
 		</property>
 		<property name="value">
-			<value>10</value>
+			<value>-80</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{80f35e89-1ae5-4251-b279-96c45f58f79b}">
@@ -640,7 +650,7 @@
 			<value>1</value>
 		</property>
 		<property name="value">
-			<value>10</value>
+			<value>-80</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{6b2b8600-05f6-4330-a6fa-b1ed83308c0b}">
