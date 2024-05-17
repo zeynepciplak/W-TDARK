@@ -50,6 +50,8 @@ public class arrowText : MonoBehaviour
                         bowText.bowAktif = false;
                         swordText.swordAktif = false;
 
+                        wandText.wandAktif = false;
+
 
                     }
                 }

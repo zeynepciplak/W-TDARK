@@ -21,6 +21,9 @@ TagManager:
   - Water
   - MainGround
   - Grass
+  - crook1
+  - crook2
+  - boss1
   layers:
   - Default
   - TransparentFX
