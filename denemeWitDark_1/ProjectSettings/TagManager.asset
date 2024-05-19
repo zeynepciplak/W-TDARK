@@ -24,6 +24,7 @@ TagManager:
   - crook1
   - crook2
   - boss1
+  - radar
   layers:
   - Default
   - TransparentFX

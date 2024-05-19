@@ -10,7 +10,7 @@ public class swordHareket : MonoBehaviour
     public Animator swordLastVurus;
     public static int i;
 
-    private bool canDash = true;
+    //private bool canDash = true;
     private bool isDashing;
     private float dashingPower = 48f;
     private float dashingTime = 1.5f;
@@ -57,7 +57,7 @@ public class swordHareket : MonoBehaviour
     }
     private IEnumerator Dash()
     {
-        canDash = false;
+        //canDash = false;
         isDashing = true;
 
         // PlayerMovement.rb.velocity = new Vector2(transform.localScale.z * dashingPower, 0f);
@@ -79,6 +79,6 @@ public class swordHareket : MonoBehaviour
         yield return new WaitForSeconds(dashingTime);
         tr.emitting = false;
         isDashing = false;
-        canDash = true;
+        //canDash = true;
     }
 }

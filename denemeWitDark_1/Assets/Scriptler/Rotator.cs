@@ -69,6 +69,7 @@ public class Rotator : MonoBehaviour
         float initialRotation = transform.rotation.eulerAngles.z;
         float targetRotation = initialRotation + 360f;
 
+
         while (transform.rotation.eulerAngles.z < targetRotation)
         {
             isikObjesi.SetActive(true);
