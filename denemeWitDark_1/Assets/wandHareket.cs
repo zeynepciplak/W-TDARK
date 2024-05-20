@@ -9,7 +9,7 @@ public class wandHareket : MonoBehaviour
     public static int i;
     public static Rigidbody2D rb;
 
-    [SerializeField] private TrailRenderer tr;
+    //[SerializeField] private TrailRenderer tr;
     void Start()
     {
         wandVurus = GetComponent<Animator>();
@@ -20,7 +20,10 @@ public class wandHareket : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.F))
         {
-            wandVurus.Play("sparkAnimation");
+            if (wandText.wandAktif == true)
+            {
+                wandVurus.Play("sparkAnimation");
+            }
         }
     }
     

@@ -13,10 +13,15 @@ public class wandText : MonoBehaviour
 
     // :sunglasses:
     public static bool wandAktif = false;
+    public static SpriteRenderer wandSpriteRenderer;
+
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         text = GetComponent<TextMeshProUGUI>();
+
+        //:sunglasses:
+        wandSpriteRenderer = GameObject.Find("wand").GetComponent<SpriteRenderer>();
     }
 
     void Update()
@@ -48,9 +53,15 @@ public class wandText : MonoBehaviour
                     {
                         Debug.Log("Asa alýndý");
                         wandAktif = true;
-                        bowText.bowAktif = false;
+                        wandSpriteRenderer.enabled = true;
+
                         arrowText.arrowAktif = false;
+
+                        bowText.bowAktif = false;
+                        bowText.bowSpriteRenderer.enabled = false;                        
+
                         swordText.swordAktif = false;
+                        swordText.swordSpriteRenderer.enabled = false;
 
                     }
                 }

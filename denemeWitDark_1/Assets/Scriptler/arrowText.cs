@@ -47,11 +47,15 @@ public class arrowText : MonoBehaviour
                     {
                         Debug.Log("Ok alýndý");
                         arrowAktif = true;
+
                         bowText.bowAktif = false;
+                        bowText.bowSpriteRenderer.enabled = false;
+
                         swordText.swordAktif = false;
+                        swordText.swordSpriteRenderer.enabled = false;
 
                         wandText.wandAktif = false;
-
+                        wandText.wandSpriteRenderer.enabled = false;
 
                     }
                 }

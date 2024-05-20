@@ -36,23 +36,25 @@ public class swordHareket : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.F))
         {
-            if (i == 0)
+            if (swordText.swordAktif == true)
             {
-                swordSolVurus.Play("swordAnimation2");
-                i += 1;
+                if (i == 0)
+                {
+                    swordSolVurus.Play("swordAnimation2");
+                    i += 1;
+                }
+                else if (i == 1)
+                {
+                    swordSagVurus.Play("swordAnimation3");
+                    i += 1;
+                }
+                else if (i == 2)
+                {
+                    StartCoroutine(Dash());
+                    swordLastVurus.Play("swordAnimation5");
+                    i = 0;
+                }
             }
-            else if (i == 1)
-            {
-                swordSagVurus.Play("swordAnimation3");
-                i += 1;
-            }
-            else if (i == 2)
-            {
-                StartCoroutine(Dash());
-                swordLastVurus.Play("swordAnimation5");
-                i = 0;
-            }
-
         }
     }
     private IEnumerator Dash()

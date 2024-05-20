@@ -10,13 +10,17 @@ public class swordText : MonoBehaviour
     public static int swordAmount = 0;
     public int i = 0;
     GameObject player;
+
     // :sunglasses:
     public static bool swordAktif = false;
+    public static SpriteRenderer swordSpriteRenderer;
 
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         text = GetComponent<TextMeshProUGUI>();
+
+        swordSpriteRenderer = GameObject.Find("sword").GetComponent<SpriteRenderer>();
     }
 
     void Update()
@@ -50,10 +54,15 @@ public class swordText : MonoBehaviour
                     {
                         Debug.Log("Kılıç alındı");
                         swordAktif = true;
-                        bowText.bowAktif = false;
+                        swordSpriteRenderer.enabled = true;
+
                         arrowText.arrowAktif = false;
 
+                        bowText.bowAktif = false;
+                        bowText.bowSpriteRenderer.enabled = false;
+
                         wandText.wandAktif = false;
+                        wandText.wandSpriteRenderer.enabled = false;
 
                     }
                 }
