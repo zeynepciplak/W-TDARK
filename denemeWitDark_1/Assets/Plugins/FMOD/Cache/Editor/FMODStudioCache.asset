@@ -332,6 +332,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 28500
+--- !u!114 &-6388029888302641220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/TutSceneCut
+  m_EditorClassIdentifier: 
+  Path: event:/TutSceneCut
+  Guid:
+    Data1: -1644185674
+    Data2: 1320083321
+    Data3: 703356297
+    Data4: 1294877336
+  Banks:
+  - {fileID: -1559416214611816517}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 5000
 --- !u!114 &-6200153105189932988
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -799,7 +826,7 @@ MonoBehaviour:
   Path: events/Fmod Events Mitte/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638513237559468008
+  lastModified: 638519172459709957
   FileSizes:
   - Name: Desktop
     Value: 20268544
@@ -906,6 +933,26 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 826688
+  Exists: 1
+--- !u!114 &-1559416214611816517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/DFX.bank
+  m_EditorClassIdentifier: 
+  Path: events/Fmod Events Mitte/Build/Desktop/DFX.bank
+  Name: DFX
+  StudioPath: bank:/DFX
+  lastModified: 638519172457531423
+  FileSizes:
+  - Name: Desktop
+    Value: 1257792
   Exists: 1
 --- !u!114 &-1336033178744578359
 MonoBehaviour:
@@ -1104,6 +1151,7 @@ MonoBehaviour:
   - {fileID: -2823328840702692608}
   - {fileID: 4289878728430522434}
   - {fileID: 660138075556001091}
+  - {fileID: -1559416214611816517}
   EditorEvents:
   - {fileID: 7390119818839666981}
   - {fileID: -6473017107637930028}
@@ -1127,12 +1175,15 @@ MonoBehaviour:
   - {fileID: -3911069993450475829}
   - {fileID: -3638465818243394191}
   - {fileID: 913642987008643220}
+  - {fileID: 1742802339128344990}
+  - {fileID: 7915167008809255486}
+  - {fileID: -6388029888302641220}
   EditorParameters: []
   MasterBanks:
   - {fileID: -2823328840702692608}
   StringsBanks:
   - {fileID: 7885368521769768355}
-  cacheTime: 638513237559511846
+  cacheTime: 638519172459755414
   cacheVersion: 131617
 --- !u!114 &6035698564269841
 MonoBehaviour:
@@ -1304,7 +1355,7 @@ MonoBehaviour:
   Path: events/Fmod Events Mitte/Build/Desktop/MFX.bank
   Name: MFX
   StudioPath: bank:/MFX
-  lastModified: 638513237558950883
+  lastModified: 638519128618361973
   FileSizes:
   - Name: Desktop
     Value: 2420288
@@ -1364,6 +1415,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &1742802339128344990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/firstScene
+  m_EditorClassIdentifier: 
+  Path: event:/firstScene
+  Guid:
+    Data1: -1408087208
+    Data2: 1289808356
+    Data3: -1884084323
+    Data4: -1520403073
+  Banks:
+  - {fileID: -1559416214611816517}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 51000
 --- !u!114 &1830389988999539065
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1434,8 +1512,8 @@ MonoBehaviour:
     Data3: 1722113676
     Data4: -824626759
   Banks:
-  - {fileID: -2823328840702692608}
   - {fileID: 4289878728430522434}
+  - {fileID: -2823328840702692608}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -1658,7 +1736,7 @@ MonoBehaviour:
   Path: events/Fmod Events Mitte/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638513237559511846
+  lastModified: 638519128620500620
   FileSizes:
   - Name: Desktop
     Value: 3466272
@@ -2275,11 +2353,38 @@ MonoBehaviour:
   Path: events/Fmod Events Mitte/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638513237559475194
+  lastModified: 638519172459755414
   FileSizes:
   - Name: Desktop
-    Value: 2040
+    Value: 2212
   Exists: 1
+--- !u!114 &7915167008809255486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/firstSceneCut
+  m_EditorClassIdentifier: 
+  Path: event:/firstSceneCut
+  Guid:
+    Data1: 1619855467
+    Data2: 1229484154
+    Data3: -390564681
+    Data4: 2119407519
+  Banks:
+  - {fileID: -1559416214611816517}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &7953808667738463394
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -2,12 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using FMODUnity;
+using FMOD.Studio;
 
 public class TutorialCutscene : MonoBehaviour
 {
     public static bool isCutsceneOn;
 
     private bool hasEntered = false; // Tetiklendi mi?
+
+    public StudioEventEmitter cutsceneSoundEmitter;
+
+    
 
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -21,11 +27,14 @@ public class TutorialCutscene : MonoBehaviour
             PlayerMovement.rb.velocity = Vector2.zero;
 
             isCutsceneOn = true;
-            Debug.Log("Hoþ Geldin sevgili oyuncu! Oyunda hareket etmek için 'WASD' tuþlarýný kullanmalýsýn. Ne yazýk ki yön tuþlarý envanter menüsü için kullanýlýyor.\n" +
-                      "Ekranda Dört bir yanýnda ki deneme tahtalarý ile gücünü test edebilir, çevre ile etkileþime girmek için ise G tuþuna basarak radarý kullanabilirsin.\n" +
-                      "Düþmanlar ile dövüþmek için radarýný L tuþu ile düþmana kitlemen ve ardýndan F tuþu ile saldýrý gerçekleþtirmen gerekiyor.\n" +
-                      "WitDark evreninde baþarýlar yoldaþ");
+            Debug.Log("Hoï¿½ Geldin sevgili oyuncu! Oyunda hareket etmek iï¿½in 'WASD' tuï¿½larï¿½nï¿½ kullanmalï¿½sï¿½n. Ne yazï¿½k ki yï¿½n tuï¿½larï¿½ envanter menï¿½sï¿½ iï¿½in kullanï¿½lï¿½yor.\n" +
+                      "Ekranda Dï¿½rt bir yanï¿½nda ki deneme tahtalarï¿½ ile gï¿½cï¿½nï¿½ test edebilir, ï¿½evre ile etkileï¿½ime girmek iï¿½in ise G tuï¿½una basarak radarï¿½ kullanabilirsin.\n" +
+                      "Dï¿½ï¿½manlar ile dï¿½vï¿½ï¿½mek iï¿½in radarï¿½nï¿½ L tuï¿½u ile dï¿½ï¿½mana kitlemen ve ardï¿½ndan F tuï¿½u ile saldï¿½rï¿½ gerï¿½ekleï¿½tirmen gerekiyor.\n" +
+                      "WitDark evreninde baï¿½arï¿½lar yoldaï¿½");
             Invoke(nameof(StopCutscene), 5f);
+
+            // Sahne baÅŸladÄ±ÄŸÄ±nda sesi Ã§al
+            cutsceneSoundEmitter.Play();
             
         }
     }
@@ -33,6 +42,8 @@ public class TutorialCutscene : MonoBehaviour
     void StopCutscene()
     {
         isCutsceneOn = false;
+          // Sahne durduÄŸunda sesi durdur
+        cutsceneSoundEmitter.Stop();
         Destroy(gameObject);
 
 
