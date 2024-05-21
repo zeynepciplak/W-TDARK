@@ -1,17 +1,22 @@
 using UnityEngine;
+using FMODUnity;
+using FMOD.Studio;
+
 
 public class tutorialCutscene2 : MonoBehaviour
 {
-    public string[] hedefObjelerIsimleri = { "DenemeTahtasý (1)", "DenemeTahtasý (2)", "DenemeTahtasý (3)", "DenemeTahtasý(4)" };
+    public string[] hedefObjelerIsimleri = { "DenemeTahtasï¿½ (1)", "DenemeTahtasï¿½ (2)", "DenemeTahtasï¿½ (3)", "DenemeTahtasï¿½(4)" };
 
     public static bool isCutsceneOn;
     private bool hasEntered = false; // Tetiklendi mi?
+
+     public StudioEventEmitter cutsceneSoundEmitter;
 
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player" && !hasEntered)
         {
-            // Hedef objelerin hepsi yok olduðunda cutscene'i baþlat
+            // Hedef objelerin hepsi yok olduï¿½unda cutscene'i baï¿½lat
             if (hepsiYok())
             {
                 hasEntered = true;
@@ -22,15 +27,19 @@ public class tutorialCutscene2 : MonoBehaviour
 
                 isCutsceneOn = true;
                 Debug.Log("Hedef objelerin hepsi yok edildi!\n" +
-                          "Tekrar karþýlaþana kadar görüþürüz yolcu");
+                          "Tekrar karï¿½ï¿½laï¿½ana kadar gï¿½rï¿½ï¿½ï¿½rï¿½z yolcu");
                 Invoke(nameof(StopCutscene), 5f);
+
+                // Sahne baÅŸladÄ±ÄŸÄ±nda sesi Ã§al
+            cutsceneSoundEmitter.Play();
+
             }
         }
     }
 
     private bool hepsiYok()
     {
-        // Hedef objelerin hepsinin yok olup olmadýðýný kontrol edin
+        // Hedef objelerin hepsinin yok olup olmadï¿½ï¿½ï¿½nï¿½ kontrol edin
         foreach (string hedefObjesiIsmi in hedefObjelerIsimleri)
         {
             GameObject hedefObjesi = GameObject.Find(hedefObjesiIsmi);
@@ -39,7 +48,7 @@ public class tutorialCutscene2 : MonoBehaviour
                 return false; // En az bir hedef obje var
             }
         }
-        return true; // Tüm hedef objeler yok
+        return true; // Tï¿½m hedef objeler yok
     }
 
     void StopCutscene()
@@ -51,6 +60,10 @@ public class tutorialCutscene2 : MonoBehaviour
             player.transform.position = new Vector3(215.5f, 26f, 0f);
         else
             Debug.LogError("Player object not found!");
+
+             // Sahne durduÄŸunda sesi durdur
+        cutsceneSoundEmitter.Stop();
+        
         Destroy(gameObject);
     }
 }

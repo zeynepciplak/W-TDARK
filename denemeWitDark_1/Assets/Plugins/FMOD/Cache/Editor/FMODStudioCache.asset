@@ -24,6 +24,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-9169352395631033806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Guardian/guardian
+  m_EditorClassIdentifier: 
+  Path: event:/Guardian/guardian
+  Guid:
+    Data1: -1836188947
+    Data2: 1155639186
+    Data3: 2021876657
+    Data4: 1627988007
+  Banks:
+  - {fileID: -1559416214611816517}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 30615
 --- !u!114 &-9018314876894007731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -826,7 +853,7 @@ MonoBehaviour:
   Path: events/Fmod Events Mitte/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638519172459709957
+  lastModified: 638519241298809023
   FileSizes:
   - Name: Desktop
     Value: 20268544
@@ -949,10 +976,10 @@ MonoBehaviour:
   Path: events/Fmod Events Mitte/Build/Desktop/DFX.bank
   Name: DFX
   StudioPath: bank:/DFX
-  lastModified: 638519172457531423
+  lastModified: 638519241296823582
   FileSizes:
   - Name: Desktop
-    Value: 1257792
+    Value: 1588096
   Exists: 1
 --- !u!114 &-1336033178744578359
 MonoBehaviour:
@@ -1178,12 +1205,13 @@ MonoBehaviour:
   - {fileID: 1742802339128344990}
   - {fileID: 7915167008809255486}
   - {fileID: -6388029888302641220}
+  - {fileID: -9169352395631033806}
   EditorParameters: []
   MasterBanks:
   - {fileID: -2823328840702692608}
   StringsBanks:
   - {fileID: 7885368521769768355}
-  cacheTime: 638519172459755414
+  cacheTime: 638519241298858495
   cacheVersion: 131617
 --- !u!114 &6035698564269841
 MonoBehaviour:
@@ -2353,10 +2381,10 @@ MonoBehaviour:
   Path: events/Fmod Events Mitte/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638519172459755414
+  lastModified: 638519241298858495
   FileSizes:
   - Name: Desktop
-    Value: 2212
+    Value: 2256
   Exists: 1
 --- !u!114 &7915167008809255486
 MonoBehaviour:
