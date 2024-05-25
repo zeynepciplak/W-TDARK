@@ -90,7 +90,7 @@ TextureImporter:
       213: 3275407576765064038
     second: GrayPinkFish
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -107,11 +107,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -150,6 +151,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -161,6 +164,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -173,6 +177,33 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -1189,37 +1220,36 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Flame1: 1996736365424406157
-      Candle7: -5682520854953723632
-      Stake5: -481245653516771970
-      WoodenBox1: 7176612008784037988
-      Stake1: -6694273423969811630
-      Stake6: -552038436828552447
-      Spikes3: -258877172012560662
       BlueFish: 7642980859614939925
-      Pottery6: 2629797680524218922
-      TorchBase1: -6805859551083971301
-      Pottery1: 7846451417021390320
-      GrayPinkFish: 3275407576765064038
-      Pottery8: 9097861789848553255
-      Crystals5: 6723339952603699720
       BombOld: 3082405126085708043
-      Flame4: 4824839325428195188
       Bucket: 2703656358410550512
-      Candle8: -5643596672663569652
       Candle3: 4609675031244458393
+      Candle7: -5682520854953723632
+      Candle8: -5643596672663569652
+      Crystals5: 6723339952603699720
       CutTreeTrunk: 1626533992575499785
       FallenTrunk: -2199377766806250543
-      Skeleton 6: -4458533334289142918
-      Pottery5: -8422439587084867187
-      Flame3: 3927549165190998101
-      OrangeFish: -174804484191063705
-      Spikes4: -5123786616735696353
+      Flame1: 1996736365424406157
       Flame2: -5111738877264174855
+      Flame3: 3927549165190998101
+      Flame4: 4824839325428195188
       Goblet1: 5554825445024860723
-  spritePackingTag: 
+      GrayPinkFish: 3275407576765064038
+      OrangeFish: -174804484191063705
+      Pottery1: 7846451417021390320
+      Pottery5: -8422439587084867187
+      Pottery6: 2629797680524218922
+      Pottery8: 9097861789848553255
+      Skeleton 6: -4458533334289142918
+      Spikes3: -258877172012560662
+      Spikes4: -5123786616735696353
+      Stake1: -6694273423969811630
+      Stake5: -481245653516771970
+      Stake6: -552038436828552447
+      TorchBase1: -6805859551083971301
+      WoodenBox1: 7176612008784037988
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

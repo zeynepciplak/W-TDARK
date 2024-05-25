@@ -9,11 +9,7 @@ using FMODUnity;
 public class coin : MonoBehaviour
 {
     private bool _collected = false;
-
-    //private AudioManager audioManager;
-
     private Transform playerTransform; // Store Player's Transform component
-
     private StudioEventEmitter emitter;
 
     void Start()
@@ -26,32 +22,19 @@ public class coin : MonoBehaviour
         emitter= AudioManager.instance.InitializeEventEmitter(FMODEvents.instance.coinIdle, this.gameObject);
         emitter.Play();
     }
- 
-
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        /*
-        if (collision.gameObject.CompareTag("Player")) // Check if colliding with "Player" tag
-        {
-            ScoreText.coinAmount += 1;
-            Destroy(gameObject);
-        }
-        */
         if (collision.gameObject.CompareTag("Player") )
         {
-         if (!_collected)
+            if (!_collected)
             {
-           /*     // coinAS sesini AudioManager üzerinden çal
-            if (audioManager != null && audioManager.coinAS != null)
-            {
-                audioManager.PlayAudio(audioManager.coinAS);
-            }*/
                 ScoreText.coinAmount += 1;
+
                 _collected = true;// Not needed if destroying the game object
                 Destroy(this.gameObject);// Only use if you intend to destroy the game object
                
-               emitter.Stop();
+                emitter.Stop();
                 AudioManager.instance.PlayOneShot(FMODEvents.instance.coinCollected, this.playerTransform.position);
 
             }
@@ -59,12 +42,7 @@ public class coin : MonoBehaviour
         if (collision.gameObject.CompareTag("PlayerLight"))
         {
             Debug.Log("Item");
-
-
-
-
             float distance = Vector3.Distance(transform.position, playerTransform.position);
-            // Debug.Log("Distance to Player: " + distance + " units");
 
             if (distance > 8)
             {

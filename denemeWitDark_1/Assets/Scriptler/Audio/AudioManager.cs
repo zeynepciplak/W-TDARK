@@ -36,12 +36,20 @@ public class AudioManager : MonoBehaviour
     }
 
     public StudioEventEmitter InitializeEventEmitter(EventReference eventReference, GameObject emitterGameObject)
+{
+    StudioEventEmitter emitter = emitterGameObject.GetComponent<StudioEventEmitter>();
+    emitter.EventReference = eventReference;
+    eventEmitters.Add(emitter);
+
+    // Hoparlör simgesini devre dışı bırak
+    Renderer renderer = emitterGameObject.GetComponent<Renderer>();
+    if (renderer != null)
     {
-        StudioEventEmitter emitter = emitterGameObject.GetComponent<StudioEventEmitter>();
-        emitter.EventReference = eventReference;
-        eventEmitters.Add(emitter);
-        return emitter;
+        renderer.enabled = false;
     }
+
+    return emitter;
+}
 
     private void CleanUp()
     {
@@ -67,5 +75,16 @@ public class AudioManager : MonoBehaviour
     internal StudioEventEmitter InitializeEventEmitter(object swordIdle, GameObject gameObject)
     {
         throw new NotImplementedException();
+    }
+
+    // Ses olayını durdurmak için metot
+    public void StopEvent(GameObject gameObject)
+    {
+        // Eğer bu nesne bir StudioEventEmitter bileşeni içeriyorsa, onun oynatılan sesini durdur
+        StudioEventEmitter emitter = gameObject.GetComponent<StudioEventEmitter>();
+        if (emitter != null)
+        {
+            emitter.Stop();
+        }
     }
 }

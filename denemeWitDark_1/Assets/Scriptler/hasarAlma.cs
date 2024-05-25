@@ -8,11 +8,21 @@ public class hasarAlma : MonoBehaviour
 
     private Transform playerTransform;
     public float damageAmount = 15;
+
+    // :sunglasses:
+    GameObject player;
+    public bool bowSecili = false;
+    public bool arrowSecili = false;
     private void Start()
     {
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
         currentHealth = maxHealth;
 
+        /*
+        // :sunglasses:
+        bowSecili = player.GetComponent<bowText>().bowAktif;
+        arrowSecili = player.GetComponent<arrowText>().arrowAktif;
+        */
     }
 
     private void Update()
