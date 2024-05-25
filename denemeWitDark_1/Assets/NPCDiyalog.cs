@@ -33,6 +33,12 @@ public class NPCDiyalog : MonoBehaviour
         if (diyalogText.text == diyalog[index])
         {
             devamButonu.SetActive(true);
+
+            if (Input.GetKeyDown(KeyCode.Space)) // Space tuþu ile devam etme
+            {
+                NextLine();
+            }
+
         }
     }
 
