@@ -13,8 +13,6 @@ public class Rotator : MonoBehaviour
 }
 */
 
-
-
 using System.Collections;
 using UnityEngine;
 public class Rotator : MonoBehaviour

@@ -38,6 +38,8 @@ public class PlayerMovement : MonoBehaviour
             speedY = 0;
             rb.velocity = Vector2.zero;
         }
+
+        
     }
 }
 
