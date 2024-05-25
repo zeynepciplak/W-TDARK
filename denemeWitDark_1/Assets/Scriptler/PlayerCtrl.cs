@@ -1,4 +1,56 @@
 using UnityEngine;
+public class PlayerCtrl : MonoBehaviour
+{
+    public GameObject inventory;
+    public static bool invIsActive = false;
+    // Bu alttaki ne ise yarıyor bilmiyorum -Ömer
+    [SerializeField] float speed;
+    public static int swordAmount = 0;
+
+    public GameObject player;
+    public GameObject inventoryMenu;
+    public GameObject[] inventorySlots;
+    public int selectedSlotIndex = 0;
+
+    void Start()
+    {
+        inventory.SetActive(false);
+    }
+
+    void Update()
+    {
+        if (!invIsActive)
+        {
+            if (Input.GetKeyDown(KeyCode.I))
+            {
+                inventory.SetActive(true);
+                invIsActive = true;
+            }
+        }
+        else
+        {
+            if (Input.GetKeyDown(KeyCode.A))
+            {
+                selectedSlotIndex = (selectedSlotIndex - 1 + inventorySlots.Length) % inventorySlots.Length;
+                Debug.Log("Seçilen envanter: " + inventorySlots[selectedSlotIndex].name);
+            }
+            else if (Input.GetKeyDown(KeyCode.D))
+            {
+                selectedSlotIndex = (selectedSlotIndex + 1) % inventorySlots.Length;
+                Debug.Log("Seçilen envanter: " + inventorySlots[selectedSlotIndex].name);
+            }
+            if (Input.GetKeyDown(KeyCode.I))
+            {
+                inventory.SetActive(false);
+                invIsActive = false;
+            }
+        }
+    }
+
+
+}
+/*
+using UnityEngine;
 
 public class PlayerCtrl : MonoBehaviour
 {
@@ -56,7 +108,7 @@ public class PlayerCtrl : MonoBehaviour
 
 
 }
-
+*/
 
 /*
 using System;
