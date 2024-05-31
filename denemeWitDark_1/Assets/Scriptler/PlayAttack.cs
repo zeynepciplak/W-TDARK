@@ -2,9 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using FMODUnity;
 
 public class PlayAttack : MonoBehaviour
 {
+
+    public StudioEventEmitter vurmaSesiEmitter;
     public float boss1_MaxHP = 1000;
     private float boss1_CurrentHP;
 
@@ -56,6 +59,7 @@ public class PlayAttack : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F))
         {
+             vurmaSesiEmitter.Play();
             if (bowText.bowAktif == true && swordText.swordAktif == false && arrowText.arrowAktif == false)
             {
                 damageAmount = 15;
@@ -207,8 +211,8 @@ public class PlayAttack : MonoBehaviour
 
     void Die()
     {
-        // Düþmanýn ölümüyle ilgili iþlemler burada gerçekleþtirilir
-        Destroy(gameObject); // Düþmaný yok et
+        // Dï¿½ï¿½manï¿½n ï¿½lï¿½mï¿½yle ilgili iï¿½lemler burada gerï¿½ekleï¿½tirilir
+        Destroy(gameObject); // Dï¿½ï¿½manï¿½ yok et
     }
 }
 
