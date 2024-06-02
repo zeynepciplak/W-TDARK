@@ -4,7 +4,7 @@ public class PlayerCtrl : MonoBehaviour
     public GameObject inventory;
     public static bool invIsActive = false;
     // Bu alttaki ne ise yarıyor bilmiyorum -Ömer
-    [SerializeField] float speed;
+     public float speed;
     public static int swordAmount = 0;
 
     public GameObject player;
