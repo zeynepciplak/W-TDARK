@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{996ac20d-6290-455d-bd89-543d174ede2b}">
+		<property name="assetPath">
+			<value>158498-Feet-Footsteps-Tile-Boots-Rubber-Sorel-Winter_Boots-Left_Foot.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.73142857142857143</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{d1dfd176-3792-46a2-9e26-6cb0f7ba0814}</destination>
+		</relationship>
+	</object>
+</objects>
