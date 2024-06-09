@@ -120,9 +120,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.039235592, y: 0.19617748}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 3.1680164
 --- !u!50 &7276886554257096739
 Rigidbody2D:
   serializedVersion: 4
@@ -165,11 +165,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: 1338665514
-      Data2: 1317571959
-      Data3: 1722113676
-      Data4: -824626759
-    Path: event:/Vibration
+      Data1: -128203588
+      Data2: 1323960612
+      Data3: 963654798
+      Data4: -1971585282
+    Path: event:/Vibration3
   Event: 
   PlayEvent: 1
   StopEvent: 2
@@ -178,9 +178,9 @@ MonoBehaviour:
   Preload: 0
   AllowNonRigidbodyDoppler: 0
   Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
+  OverrideAttenuation: 1
+  OverrideMinDistance: 3.2756605
+  OverrideMaxDistance: 35
 --- !u!114 &7208132840967984893
 MonoBehaviour:
   m_ObjectHideFlags: 0

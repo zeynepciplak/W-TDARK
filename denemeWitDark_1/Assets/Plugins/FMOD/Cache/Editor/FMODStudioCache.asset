@@ -586,6 +586,35 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-4368994113330263869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/footsteps/Footsteps
+  m_EditorClassIdentifier: 
+  Name: Footsteps
+  StudioPath: 
+  Min: 0
+  Max: 4
+  Default: 0
+  ID:
+    data1: 1633389895
+    data2: 2474455408
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - Grass
+  - Sand
+  - Water
+  - Wood
+  - Dirt
+  Exists: 1
 --- !u!114 &-4196914081183630525
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -853,10 +882,10 @@ MonoBehaviour:
   Path: events/Fmod Events Mitte/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638521833021058258
+  lastModified: 638535584473951687
   FileSizes:
   - Name: Desktop
-    Value: 20265248
+    Value: 20265344
   Exists: 1
 --- !u!114 &-2507677279733788985
 MonoBehaviour:
@@ -911,6 +940,7 @@ MonoBehaviour:
   - {fileID: 2573225468760821873}
   - {fileID: -3421777157565938645}
   - {fileID: -9018314876894007731}
+  - {fileID: -4368994113330263869}
   MinDistance: 1
   MaxDistance: 20
   Length: 5000
@@ -1161,6 +1191,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 5175
+--- !u!114 &-222882219409411336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Vibration3
+  m_EditorClassIdentifier: 
+  Path: event:/Vibration3
+  Guid:
+    Data1: -128203588
+    Data2: 1323960612
+    Data3: 963654798
+    Data4: -1971585282
+  Banks:
+  - {fileID: 4289878728430522434}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 23500
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1206,12 +1263,15 @@ MonoBehaviour:
   - {fileID: 7915167008809255486}
   - {fileID: -6388029888302641220}
   - {fileID: -9169352395631033806}
+  - {fileID: 3889619397519091652}
+  - {fileID: 6915561126583985985}
+  - {fileID: -222882219409411336}
   EditorParameters: []
   MasterBanks:
   - {fileID: -2823328840702692608}
   StringsBanks:
   - {fileID: 7885368521769768355}
-  cacheTime: 638521833022066143
+  cacheTime: 638535594461139284
   cacheVersion: 131617
 --- !u!114 &6035698564269841
 MonoBehaviour:
@@ -1559,9 +1619,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/footsteps/Bush
+  m_Name: parameter:/footsteps/Grass
   m_EditorClassIdentifier: 
-  Name: Bush
+  Name: Grass
   StudioPath: 
   Min: 0
   Max: 1
@@ -1725,6 +1785,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 22777
+--- !u!114 &3889619397519091652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Vibration2-1
+  m_EditorClassIdentifier: 
+  Path: event:/Vibration2-1
+  Guid:
+    Data1: -145119867
+    Data2: 1231302936
+    Data3: 1335220401
+    Data4: -365370260
+  Banks:
+  - {fileID: 4289878728430522434}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &4081030130845478578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1764,10 +1851,10 @@ MonoBehaviour:
   Path: events/Fmod Events Mitte/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638521833022066143
+  lastModified: 638535594461139284
   FileSizes:
   - Name: Desktop
-    Value: 3462976
+    Value: 4489824
   Exists: 1
 --- !u!114 &4339187146427771006
 MonoBehaviour:
@@ -2230,6 +2317,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 16000
+--- !u!114 &6915561126583985985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Vibration2
+  m_EditorClassIdentifier: 
+  Path: event:/Vibration2
+  Guid:
+    Data1: 217599998
+    Data2: 1263974718
+    Data3: -943542111
+    Data4: -1225404239
+  Banks:
+  - {fileID: 4289878728430522434}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 70060
 --- !u!114 &7110367041369559509
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2381,10 +2495,10 @@ MonoBehaviour:
   Path: events/Fmod Events Mitte/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638521833021098784
+  lastModified: 638535584474000709
   FileSizes:
   - Name: Desktop
-    Value: 2256
+    Value: 2376
   Exists: 1
 --- !u!114 &7915167008809255486
 MonoBehaviour:
