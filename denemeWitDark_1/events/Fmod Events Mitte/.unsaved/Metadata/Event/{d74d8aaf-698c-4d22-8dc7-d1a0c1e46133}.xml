@@ -166,7 +166,7 @@
 	</object>
 	<object class="EventMixerMaster" id="{52980e10-5009-43ae-8990-1446982e0ed7}">
 		<property name="volume">
-			<value>-10</value>
+			<value>-70</value>
 		</property>
 		<relationship name="modulators">
 			<destination>{4c161430-d23d-414b-8e09-4c88883664cc}</destination>
@@ -361,7 +361,6 @@
 		<relationship name="sounds">
 			<destination>{1a083e2e-528b-42a0-ba90-cfbc804b4f48}</destination>
 			<destination>{77b9de80-803d-46ce-a174-f6c0a0fa34d7}</destination>
-			<destination>{c76fa6ca-f4e1-4de2-86c0-8a12d68336fa}</destination>
 			<destination>{d282308f-b5f3-46cf-b7a6-ae7e243552fb}</destination>
 		</relationship>
 	</object>
@@ -559,11 +558,6 @@
 	<object class="SingleSound" id="{77b9de80-803d-46ce-a174-f6c0a0fa34d7}">
 		<relationship name="audioFile">
 			<destination>{71600fcc-65da-4014-a84a-b471e1ce8bfd}</destination>
-		</relationship>
-	</object>
-	<object class="SingleSound" id="{c76fa6ca-f4e1-4de2-86c0-8a12d68336fa}">
-		<relationship name="audioFile">
-			<destination>{69283562-9f54-4055-965e-f945911f64f1}</destination>
 		</relationship>
 	</object>
 	<object class="SingleSound" id="{d282308f-b5f3-46cf-b7a6-ae7e243552fb}">
@@ -771,10 +765,10 @@
 	</object>
 	<object class="AutomationPoint" id="{94523935-3eca-47e7-878f-51ba84a1e4a0}">
 		<property name="position">
-			<value>0.96799999999999997</value>
+			<value>0.98999999999999999</value>
 		</property>
 		<property name="value">
-			<value>3.81469727e-06</value>
+			<value>-31</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{191035e4-fbbe-4a61-b9de-f3f83fd21a0b}">
