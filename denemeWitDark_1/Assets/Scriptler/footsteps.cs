@@ -1,4 +1,5 @@
 using UnityEngine;
+using FMODUnity;
 
 public class Footsteps : MonoBehaviour
 {
@@ -49,7 +50,17 @@ public class Footsteps : MonoBehaviour
             Debug.DrawLine(trianglePoint1, trianglePoint2);
             Debug.DrawLine(trianglePoint2, trianglePoint0);
         }
+		/*Vector3 pos=transform.position;
+		Vector3 dir=Vector3.forward;
+		RaycastHit hit;
+		if(Physics.Raycast(pos,dir,out hit,10f)){
+			Debug.Log(hit.collider.gameObject.name);
+		}
+		Debug.DrawRay(pos,dir*10f,Color.red);
+		*/
     }
+
+	
 
     void PlayFootstepSound()
     {
@@ -62,7 +73,13 @@ public class Footsteps : MonoBehaviour
 
         Debug.Log("PlayFootstepSound çağrıldı");
 
-        if (Physics.Raycast(transform.position, Vector3.down, out RaycastHit hit, 1000.0f))
+        // Debug ray çizimi
+        if (debug)
+        {
+            Debug.DrawRay(transform.position, Vector3.down * 1000.0f, Color.red, 1.0f);
+        }
+
+        if (Physics.Raycast(transform.position, Vector3.forward, out RaycastHit hit, 10f))
         {
             Debug.Log("Raycast zemini vurdu");
 
@@ -89,12 +106,12 @@ public class Footsteps : MonoBehaviour
                             }
                         }
 
-                        Texture2D maskTexture = material.GetTexture("Dirt") as Texture2D;
+                        Texture2D maskTexture = material.GetTexture("_Mask") as Texture2D;
                         if (maskTexture != null)
                         {
                             Color maskPixel = maskTexture.GetPixelBilinear(hit.textureCoord.x, hit.textureCoord.y);
 
-                            Texture2D specTexture2 = material.GetTexture("Sprite-Lit-Default") as Texture2D;
+                            Texture2D specTexture2 = material.GetTexture("_SpecGlossMap2") as Texture2D;
                             if (specTexture2 != null)
                             {
                                 float tiling = 40.0f;
@@ -116,11 +133,15 @@ public class Footsteps : MonoBehaviour
             else
             {
                 water = 0.0f;
-                dirt = 0.0f;
+                dirt = 1.0f;
                 sand = 0.0f;
-                wood = 1.0f;
+                wood = 0.0f;
                 grass = 0.0f;
             }
+        }
+        else
+        {
+            Debug.Log("Raycast zemine çarpmadı");
         }
 
         if (debug)
