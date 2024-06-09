@@ -133,9 +133,9 @@ public class Footsteps : MonoBehaviour
             else
             {
                 water = 0.0f;
-                dirt = 1.0f;
+                dirt = .0f;
                 sand = 0.0f;
-                wood = 0.0f;
+                wood = 1.0f;
                 grass = 0.0f;
             }
         }
