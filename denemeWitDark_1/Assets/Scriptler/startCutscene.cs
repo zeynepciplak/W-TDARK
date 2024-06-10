@@ -24,11 +24,11 @@ public class startCutscene : MonoBehaviour{
             PlayerMovement.speedY = 0;
             PlayerMovement.rb.velocity = Vector2.zero;
 
-            Invoke(nameof(StopCutscene), 52f);
+            Invoke(nameof(StopCutscene), 5f);
 
 
         // Sahne başladığında sesi çal
-            cutsceneSoundEmitter.Play();
+            //cutsceneSoundEmitter.Play();
             
         }  
     }
@@ -53,7 +53,7 @@ public class startCutscene : MonoBehaviour{
             Debug.LogError("Player object not found!");
 
             // Sahne durduğunda sesi durdur
-        cutsceneSoundEmitter.Stop();
+        //cutsceneSoundEmitter.Stop();
 
         Destroy(gameObject);
     }
